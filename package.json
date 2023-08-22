@@ -1,9 +1,6 @@
 {
   "name": "tbsui-ssr",
-  "author": {
-    "name": "thebigsasha",
-    "email": "sasha@sashaphoto.ca"
-  },
+  "author": "thebigsasha <sasha@sashaphoto.ca>",
   "description": "A React component library which is capable of being deployed with javascript on the client.",
   "private": false,
   "version": "0.0.1",
@@ -89,5 +86,26 @@
     "*.{ts,tsx,js,jsx,json,css,md}": [
       "prettier -w"
     ]
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TheBigSasha/tbsui-ssr.git"
+  },
+  "keywords": [
+    "react",
+    "components",
+    "ssr",
+    "serer",
+    "side",
+    "static",
+    "select",
+    "popup",
+    "nextjs",
+    "sass"
+  ],
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TheBigSasha/tbsui-ssr/issues"
+  },
+  "homepage": "https://github.com/TheBigSasha/tbsui-ssr#readme"
 }
