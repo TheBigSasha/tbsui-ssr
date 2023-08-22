@@ -70,7 +70,7 @@ import { AtButton } from 'tbsui-ssr'
 
 ## Author
 
-[Ignacio Miranda Figueroa](https://www.linkedin.com/in/ignacio-miranda-figueroa/)
+[Alexander Aleshchenko](https://sasharesume.com)
 
 ## License
 
