@@ -1,6 +1,6 @@
 # TBSUI SSR
 
-A library of components which can all be shipped with zero javascript using NextJS. For more complex components, including reactive animations, checkout [tbsui])().
+A library of components which can all be shipped with zero javascript using NextJS. For more complex components, including reactive animations, checkout [tbsui](https://www.npmjs.com/package/tbsui).
 
 ## [What this library won't do](https://nextjs.org/docs/getting-started/react-essentials#the-use-client-directive)
 
