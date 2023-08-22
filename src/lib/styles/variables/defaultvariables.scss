@@ -10,6 +10,20 @@
   --tpcard-background-color: rgba(253, 252, 255, 0.35);
   --background-3d-color: rgb(0,0,0);
   --max-width: 960px;
-  --border-radius: 1rem;
+  --border-radius: 0.5rem;
   --padding: 1rem;
+
+  --info-color: #21f7ec;
+    --success-color: #00ff00;
+    --warning-color: #ffcc00;
+    --error-color: #ff0000;
+    
+    --font-family-label: 'Roboto', sans-serif;
+    --font-sans: 'Manrope', sans-serif;
+    --font-serif: 'EB Garamond', serif;
+
+    --font-weight-bold: 700;
+    --font-weight-normal: 400;
+    --font-weight-light: 200;
 }
+

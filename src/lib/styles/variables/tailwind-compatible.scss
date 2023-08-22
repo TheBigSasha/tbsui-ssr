@@ -204,6 +204,12 @@ $spaces: (
   72: 18rem,
   80: 20rem,
   96: 24rem,
+  xs: 0.25rem,
+  sm: 0.5rem,
+    md: 1rem,
+    lg: 1.5rem,
+    xl: 2rem,
+    "2xl": 3rem,
 );
 
 @each $size, $value in $spaces {

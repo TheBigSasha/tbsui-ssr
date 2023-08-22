@@ -1,4 +1,4 @@
-# ⚛️⚡ Vite + React + Typescript Component Library Template
+# TBSUI SSR
 
 ## Features
 
@@ -13,13 +13,6 @@
 - ⏰ [Release Please](https://github.com/googleapis/release-please) — Generate the changelog with the release-please workflow
 - 👷 [Github Actions](https://github.com/features/actions) — Releasing versions to NPM
 - Initial components setup using [Atomic Design](https://bradfrost.com/blog/post/atomic-web-design/)
-
-## Getting Started
-
-1. Create a new repository using this one as template
-2. Clone your repo
-3. Install dependencies with `pnpm i` (first run `corepack enable` to enable pnpm)
-4. Run `pnpm prepare` command to setup [Husky](https://typicode.github.io/husky) pre-commit hooks.
 
 ### Main Scripts
 
@@ -63,7 +56,7 @@ To import the styles the library needs:
 
 ```js
 /* _app.tsx */
-import '<your-library>/dist/style.css'
+import 'tbsui-srr/dist/style.css'
 // More imports and your App component ...
 ```
 
@@ -71,7 +64,7 @@ To import library components:
 
 ```js
 /* pages/index.tsx */
-import { AtButton } from '<your-library>'
+import { AtButton } from 'tbsui-ssr'
 // More imports and your Page component...
 ```
 
