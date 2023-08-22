@@ -1,6 +1,5 @@
 import react from '@vitejs/plugin-react'
 import { defineConfig } from 'vitest/config'
-import tailwindcss from 'tailwindcss'
 import { UserConfigExport } from 'vite'
 
 const app = async (): Promise<UserConfigExport> => {
@@ -8,7 +7,7 @@ const app = async (): Promise<UserConfigExport> => {
     plugins: [react()],
     css: {
       postcss: {
-        plugins: [tailwindcss],
+        plugins: [],
       },
     },
   })

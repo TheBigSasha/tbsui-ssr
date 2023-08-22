@@ -7,6 +7,8 @@ export const AT_BUTTON_VARIANT = {
 } as const
 export type AtButtonVariant = keyof typeof AT_BUTTON_VARIANT
 
+import styles from './at-button.module.scss'
+
 export const variantClasses: Record<AtButtonVariant, string> = {
   PRIMARY: 'bg-green-200 hover:bg-green-400 active:bg-green-500',
   SECONDARY: 'bg-blue-200 hover:bg-blue-400 active:bg-blue-500',
@@ -22,7 +24,7 @@ export interface AtButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 export const AtButton = ({ label, variant = 'PRIMARY', isDisabled = false, onClick }: AtButtonProps) => {
   return (
     <button
-      className={`transition-colors px-6 py-2 rounded-md ${variantClasses[variant]} ${
+      className={`${styles.at_button}${
         isDisabled ? 'bg-gray-300 text-slate-600 cursor-not-allowed pointer-events-none' : ''
       }`}
       onClick={isDisabled ? onClick : undefined}

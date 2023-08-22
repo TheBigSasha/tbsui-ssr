@@ -1,0 +1,24 @@
+@import './tailwind-compatible.scss';
+
+$border-radius: 10px;
+
+
+$primary-color: #ff0084;
+$secondary-color: complement($primary-color);
+
+$max-width: 960px;
+
+:root {
+  --primary-color: $primary-color;
+  --secondary-color: $secondary-color;
+  --text-color: #000000;
+  --background-color: rgba(253, 252, 255, 0.89);
+  --second-background-color: #{rgba(lighten($primary-color, 10%), 0.1)};
+  --disabled-color: hsla(0, 100%, 77%, 0.04);
+  --card-background-color: rgba(253, 252, 255, 0.89);
+  --tpcard-background-color: rgba(253, 252, 255, 0.35);
+  --background-3d-color: rgb(0,0,0);
+  --max-width: $max-width;
+  --border-radius: $border-radius;
+  --padding: 1rem;
+}
