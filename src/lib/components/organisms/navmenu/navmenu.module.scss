@@ -1,0 +1,17 @@
+.nav_menu{
+
+}
+
+.nav_menu_item{
+    
+}
+
+.link{
+    @extend .nav_menu_item;
+
+}
+
+.category{
+    @extend .nav_menu_item;
+
+}
