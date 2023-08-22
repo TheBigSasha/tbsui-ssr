@@ -3,7 +3,7 @@
   "author": "thebigsasha <sasha@sashaphoto.ca>",
   "description": "A React component library which is capable of being deployed with javascript on the client.",
   "private": false,
-  "version": "0.0.1",
+  "version": "1.0.0",
   "packageManager": "pnpm@8.4.0",
   "main": "./dist/vite-component-library-template.umd.js",
   "module": "./dist/vite-component-library-template.es.js",

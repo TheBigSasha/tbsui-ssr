@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.0.0 (2023-08-22)
+
+
+### Features
+
+* new components ([7e92c85](https://github.com/TheBigSasha/tbsui-ssr/commit/7e92c8524a43a8a8a42bcf8300e59e9d49370745))
+
 ## [2.0.3](https://github.com/IgnacioNMiranda/vite-component-library-template/compare/v2.0.2...v2.0.3) (2023-08-09)
 
 
