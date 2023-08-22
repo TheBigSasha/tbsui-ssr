@@ -1,5 +1,14 @@
 # TBSUI SSR
 
+A library of components which can all be shipped with zero javascript using NextJS. For more complex components, including reactive animations, checkout [tbsui])().
+
+## [What this library won't do](https://nextjs.org/docs/getting-started/react-essentials#the-use-client-directive)
+
+- Add interactivity and event listeners (onClick(), onChange(), etc)
+- Use State and Lifecycle Effects (useState(), useReducer(), useEffect(), etc)
+- Use browser-only APIs
+- Use custom hooks that depend on state, effects, or browser-only APIs
+
 ## Features
 
 - ⚛️ [React 18](https://reactjs.org/)
