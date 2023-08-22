@@ -1,6 +1,5 @@
 import React from 'react'
-import { PopupMessageProps, PopupMessageVariant, PopupMessage } from '.'
-import { objectValuesToControls } from '../../../storybook-utils'
+import { PopupMessageProps, PopupMessage } from '.'
 import { Meta } from '@storybook/react'
 import { StoryFn } from '@storybook/react'
 
