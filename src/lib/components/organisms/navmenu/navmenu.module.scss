@@ -1,17 +1,31 @@
 .nav_menu{
-
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-color: var(--tpcard-background-color);
 }
 
 .nav_menu_item{
-    
+    text-align: center;
 }
 
 .link{
     @extend .nav_menu_item;
-
+    text-decoration: none;
+    color: var(--gray-900);
+    font-size: var(--font-size-lg);
+    padding: var(--space-md);
+    &:hover{
+        color: var(--gray-700);
+    }
 }
 
 .category{
     @extend .nav_menu_item;
-
+    font-variant-caps: all-petite-caps;
+    font-size: var(--font-size-md);
+    font-weight: var(--font-weight-bold);
+    padding: var(--space-md);
 }
