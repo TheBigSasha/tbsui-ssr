@@ -1,23 +1,28 @@
 import { FC, ReactNode } from 'react'
 import styles from './navmenu.module.scss'
 
-interface MenuItem {
+export interface MenuItem {
   link: ReactNode
 }
 
-interface CategoryDelimiter {
+export interface CategoryDelimiter {
   category: string
 }
 
-type NavMenuEntry = MenuItem | CategoryDelimiter
+export type NavMenuEntry = MenuItem | CategoryDelimiter
 
-interface NavMenuProps {
+export interface NavMenuProps {
   links: NavMenuEntry[]
+  headerLeft?: ReactNode
+  headerRight?: ReactNode
 }
 
-export const NavMenu: FC<NavMenuProps> = ({ links }) => {
+export const NavMenu: FC<NavMenuProps> = ({ links, headerLeft, headerRight }) => {
   return (
-    <div className={styles.navmenu}>
+    <div className={styles.nav_menu}>
+      <div className={styles.nav_menu_header}>
+        {headerLeft} {headerRight}
+      </div>
       {links.map((link, index) => {
         if ('category' in link) {
           return (

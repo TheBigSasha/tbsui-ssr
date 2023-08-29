@@ -7,11 +7,14 @@
   --second-background-color: #{rgba(lighten(#ffeeff, 10%), 0.1)};
   --disabled-color: hsla(0, 100%, 77%, 0.04);
   --card-background-color: rgba(253, 252, 255, 0.89);
-  --tpcard-background-color: rgba(253, 252, 255, 0.35);
+  --tpcard-background-color: rgba(169, 150, 207, 0.084);
+  --navmenu-background-color: rgba(130,130,130,0.2);
   --background-3d-color: rgb(0,0,0);
   --max-width: 960px;
   --border-radius: 0.5rem;
   --padding: 1rem;
+
+  --background-blur: blur(10px);
 
   --info-color: #21f7ec;
     --success-color: #00ff00;
@@ -25,5 +28,7 @@
     --font-weight-bold: 700;
     --font-weight-normal: 400;
     --font-weight-light: 200;
+
+    --tracking-condensed: -0.03em;
 }
 
