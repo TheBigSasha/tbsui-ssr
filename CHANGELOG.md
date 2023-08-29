@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.1.0](https://github.com/TheBigSasha/tbsui-ssr/compare/v1.0.0...v1.1.0) (2023-08-29)
+
+
+### Features
+
+* navmenu ([ec029e2](https://github.com/TheBigSasha/tbsui-ssr/commit/ec029e278c431aaf8b8851cabf344da086ac4a14))
+
+
+### Bug Fixes
+
+* minor style fix for popup message ([a73951c](https://github.com/TheBigSasha/tbsui-ssr/commit/a73951cb7194c339a1d7b9c05e722665d97f9d21))
+
 ## 1.0.0 (2023-08-22)
 
 
