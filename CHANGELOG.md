@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.4.13](https://github.com/TheBigSasha/tbsui-ssr/compare/v1.4.12...v1.4.13) (2023-09-01)
+
+
+### Bug Fixes
+
+* padding hacks for navmenu ([bde7b20](https://github.com/TheBigSasha/tbsui-ssr/commit/bde7b2002d7c1d10754f0d146ff5f25735f65a99))
+
 ## [1.4.12](https://github.com/TheBigSasha/tbsui-ssr/compare/v1.4.11...v1.4.12) (2023-09-01)
 
 
