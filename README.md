@@ -11,7 +11,7 @@ A library of components which can all be shipped with zero javascript using Next
 
 ## Customization
 
-Override default scss variables to style the library! If you want to use default values, import [`tbsui-ssr/dist/assets/default-values.css`](https://github.com/TheBigSasha/tbsui-ssr/blob/f31a508401cd2fc98e6ed64dfa9ac28320da94ac/src/lib/styles/variables/default-variables.scss)
+Override default scss variables to style the library! If you want to use default values, import `default-values.scss`
 
 ## Installation
 
@@ -19,21 +19,10 @@ Override default scss variables to style the library! If you want to use default
 pnpm i tbsui-ssr
 ```
 
-## Usage
-
-**important** You must specify css variables to theme this library, and provide a `tailwind-compatible.scss` file which defines tailwind-style values (or use the `default-variables.scss` file from tbsui-ssr).
-
-```tsx
-import { PopupMessage } from 'tbsui-ssr'
-import 'my-variables.scss' // based on [`default-variables.scss`](https://github.com/TheBigSasha/tbsui-ssr/blob/f31a508401cd2fc98e6ed64dfa9ac28320da94ac/src/lib/styles/variables/default-variables.scss)
-
-const MyComponent = () => {
-  return <PopupMessage message="Hello World!" type="success" position="top-right" duration={5000} />
-}
-```
-
 ## Features
 
+- Zero client side JS -- these components are css only
+- 100% NextJS 13 Compatible
 - ⚛️ [React 18](https://reactjs.org/)
 - 📚 [Storybook 7](https://storybook.js.org/) - Components preview
 - 🖌️ SCSS Modules
@@ -46,59 +35,28 @@ const MyComponent = () => {
 - 👷 [Github Actions](https://github.com/features/actions) — Releasing versions to NPM
 - Initial components setup using [Atomic Design](https://bradfrost.com/blog/post/atomic-web-design/)
 
-### Main Scripts
+## Using the library in a React frontend app (NextJS)
 
-Always prepending pnpm:
+- Install the library running `pnpm i tbsui-ssr`
+- In your root layout / `_app.tsx`, import the stylesheets as follows:
 
-- `dev`: Bootstrap the Storybook preview with Hot Reload.
-- `build`: Builds the static storybook project.
-- `build:lib`: Builds the component library into the **dist** folder.
-- `lint:fix`: Applies linting based on the rules defined in **.eslintrc.js**.
-- `format:prettier`: Formats files using the prettier rules defined in **.prettierrc**.
-- `test`: Runs testing using watch mode.
-- `test:cov`: Runs testing displaying a coverage report.
+```typescript
+/*
+You must specify css variables to theme this library, and provide a `tailwind-compatible.scss` file which defines tailwind-style values (or use the `default-variables.css` file from tbsui-ssr/dist/assets).
+*/
+import 'tbsui-ssr/dist/assets/default-variables.css' // Use defaults or specify your own compatible variables based on `default-variables.scss` and `tailwind-compatible.scss`
 
-### Publishing the Library to NPM
-
-**Using Github as the hosting service:**
-
-1. Check the `Allow GitHub Actions to create and approve pull requests` box under the Settings>Code and automation>Actions>General repository configuration. This will allow the release-please workflow to create a PR increasing the version.
-2. Create a repository secret called `NPM_TOKEN` under Settings>Security>Secrets and variables>Actions for the github action to be able to publish the library to npm.
-
-With these 2 requirements, Pull Requests raised by release-please will have enough permissions. For more details, check the [official documentation](https://github.com/google-github-actions/release-please-action).
-
-### Versioning
-
-Following [Conventional Commits](https://www.conventionalcommits.org/).
-
-**release-please** will bump a patch version if new commits are only fixes.
-
-It will bump a minor version if new commits include a _feat_.
-
-`feat!`, `fix!`, `refactor!`, etc., which represent a breaking change, will result in a major version.
-
-In order to change the version manually (i.e. force it), a new commit has to be created including `Release-As: X.X.X` as the description.
-Example: `git commit -m "chore: v1.2.0" -m "Release-As: 1.2.0"`
-
-## Using the library in a React frontend app
-
-Install the library running `pnpm i <your-library>`.
-
-To import the styles the library needs:
-
-```js
-/* _app.tsx */
-import 'tbsui-srr/dist/style.css'
-// More imports and your App component ...
+import 'tbsui-ssr/dist/assets/popup-message.css' // and or the stylesheets for whatever components you wish to use
 ```
 
-To import library components:
+- Then, wherever you like, use the components as follows:
 
-```js
-/* pages/index.tsx */
-import { AtButton } from 'tbsui-ssr'
-// More imports and your Page component...
-```
+```tsx
+import { PopupMessage } from 'tbsui-ssr'
+
+const MyComponent = () => {
+  return <PopupMessage message="Hello World!" type="success" position="top-right" duration={5000} />
+}
 
 ## Author
 
@@ -107,3 +65,4 @@ import { AtButton } from 'tbsui-ssr'
 ## License
 
 [MIT](LICENSE)
+```
