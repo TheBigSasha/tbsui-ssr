@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.4.11](https://github.com/TheBigSasha/tbsui-ssr/compare/v1.4.10...v1.4.11) (2023-09-01)
+
+
+### Bug Fixes
+
+* navmenu x animation safari ([06251fc](https://github.com/TheBigSasha/tbsui-ssr/commit/06251fc30020a178a6ed5be90ba5849c96a464a4))
+
 ## [1.4.10](https://github.com/TheBigSasha/tbsui-ssr/compare/v1.4.9...v1.4.10) (2023-09-01)
 
 
