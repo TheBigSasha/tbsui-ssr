@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.4.2](https://github.com/TheBigSasha/tbsui-ssr/compare/v1.4.1...v1.4.2) (2023-09-01)
+
+
+### Bug Fixes
+
+* highly imporved bundler system ([3239a6b](https://github.com/TheBigSasha/tbsui-ssr/commit/3239a6b712b0056165065a9de379b75430b0cd17))
+
 ## [1.4.1](https://github.com/TheBigSasha/tbsui-ssr/compare/v1.4.0...v1.4.1) (2023-09-01)
 
 
