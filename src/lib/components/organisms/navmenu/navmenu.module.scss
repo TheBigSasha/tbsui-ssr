@@ -18,7 +18,10 @@
 }
 //https://codepen.io/i-zaplavskiy/pen/zYKQvKd
 .nav_menu {
-  z-index: 9999;
+  z-index: 9899;
+  & * {
+    z-index: 9899;
+  }
   @keyframes navmenu_transition_slidedown {
     0% {
       height: 10vh;
