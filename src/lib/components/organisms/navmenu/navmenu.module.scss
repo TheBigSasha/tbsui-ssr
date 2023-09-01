@@ -18,6 +18,7 @@
 }
 //https://codepen.io/i-zaplavskiy/pen/zYKQvKd
 .nav_menu {
+  z-index: 9999;
   @keyframes navmenu_transition_slidedown {
     0% {
       height: 10vh;
