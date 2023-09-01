@@ -8,14 +8,6 @@
   "type": "module",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
-  "exports": {
-    ".": {
-      "types": "./dist/index.d.ts",
-      "import": "./dist/tbsui-ssr.es.js",
-      "require": "./dist/tbsui-ssr.umd.js"
-    },
-    "./dist/style.css": "./dist/style.css"
-  },
   "engines": {
     "node": "18"
   },
