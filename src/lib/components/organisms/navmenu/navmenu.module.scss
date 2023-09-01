@@ -172,7 +172,7 @@
 .nav_menu_header {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: flex-st;
   align-self: center;
   justify-self: center;
   padding: 0;
@@ -221,6 +221,7 @@
   padding: 0;
   list-style: none;
   transition: all 0.3s ease-out;
+  margin-top: var(--space-sm);
 }
 
 #tbsui_ssr_navmenu_toggle {
