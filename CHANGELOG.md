@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.4.7](https://github.com/TheBigSasha/tbsui-ssr/compare/v1.4.6...v1.4.7) (2023-09-01)
+
+
+### Bug Fixes
+
+* auto splitted, reasonably named stylsheets per component ([95ff5c1](https://github.com/TheBigSasha/tbsui-ssr/commit/95ff5c1329a9893842ce617c1fc432c83f9d6888))
+
 ## [1.4.6](https://github.com/TheBigSasha/tbsui-ssr/compare/v1.4.5...v1.4.6) (2023-09-01)
 
 
