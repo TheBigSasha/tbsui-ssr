@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.4.8](https://github.com/TheBigSasha/tbsui-ssr/compare/v1.4.7...v1.4.8) (2023-09-01)
+
+
+### Bug Fixes
+
+* export default-variables.css ([99c9fb5](https://github.com/TheBigSasha/tbsui-ssr/commit/99c9fb5ef63e0432d170486f3d0fb75a4aa91ee3))
+
 ## [1.4.7](https://github.com/TheBigSasha/tbsui-ssr/compare/v1.4.6...v1.4.7) (2023-09-01)
 
 
