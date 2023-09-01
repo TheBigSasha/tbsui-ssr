@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.4.5](https://github.com/TheBigSasha/tbsui-ssr/compare/v1.4.4...v1.4.5) (2023-09-01)
+
+
+### Bug Fixes
+
+* good css module code splitting? ([24cd342](https://github.com/TheBigSasha/tbsui-ssr/commit/24cd3425599b0cb6460fd8476bc14c0e4e7291c3))
+
 ## [1.4.4](https://github.com/TheBigSasha/tbsui-ssr/compare/v1.4.3...v1.4.4) (2023-09-01)
 
 
