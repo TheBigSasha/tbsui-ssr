@@ -9,6 +9,9 @@ A library of components which can all be shipped with zero javascript using Next
 - Use browser-only APIs
 - Use custom hooks that depend on state, effects, or browser-only APIs
 
+## Customization
+Override default scss variables to style the library!
+
 ## Features
 
 - ⚛️ [React 18](https://reactjs.org/)
