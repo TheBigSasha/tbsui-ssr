@@ -6,7 +6,6 @@ import sassDts from 'vite-plugin-sass-dts'
 import { extname, relative, resolve } from 'path'
 import { fileURLToPath } from 'node:url'
 import { glob } from 'glob'
-import { libInjectCss, scanEntries } from 'vite-plugin-lib-inject-css'
 
 const app = async (): Promise<UserConfigExport> => {
   return defineConfig({
@@ -17,25 +16,24 @@ const app = async (): Promise<UserConfigExport> => {
       }),
       sassDts(),
       dts({ include: ['lib'] }),
-      libInjectCss({
-        entry: {
-          index: 'src/lib/index.ts', // Don't forget the main entry!
-          ...scanEntries(['src/lib']),
-        },
-        rollupOptions: {
-          output: {
-            assetFileNames: 'assets/[hash][extname]',
-          },
-        },
-      }),
+      // libInjectCss({
+      //   entry: {
+      //     index: 'src/lib/index.ts', // Don't forget the main entry!
+      //     ...scanEntries(['src/lib']),
+      //   },
+      //   rollupOptions: {
+      //     output: {
+      //       assetFileNames: 'assets/[hash][extname]',
+      //     },
+      //   },
+      // }),
     ],
     css: {
       modules: {
-        generateScopedName: 'tbsui-[hash:base64:6]',
+        generateScopedName: 'ts[hash:base64:4]',
       },
     },
     build: {
-      cssCodeSplit: true,
       lib: {
         entry: resolve(__dirname, 'src/lib/index.ts'),
         formats: ['es'],
