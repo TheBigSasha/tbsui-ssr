@@ -11,7 +11,7 @@ A library of components which can all be shipped with zero javascript using Next
 
 ## Customization
 
-Override default scss variables to style the library! If you want to use default values, import `default-values.scss`
+Override default scss variables to style the library! If you want to use default values, import [`tbsui-ssr/dist/assets/default-values.css`](https://github.com/TheBigSasha/tbsui-ssr/blob/f31a508401cd2fc98e6ed64dfa9ac28320da94ac/src/lib/styles/variables/default-variables.scss)
 
 ## Installation
 
@@ -25,7 +25,7 @@ pnpm i tbsui-ssr
 
 ```tsx
 import { PopupMessage } from 'tbsui-ssr'
-import 'my-variables.scss'
+import 'my-variables.scss' // based on [`default-variables.scss`](https://github.com/TheBigSasha/tbsui-ssr/blob/f31a508401cd2fc98e6ed64dfa9ac28320da94ac/src/lib/styles/variables/default-variables.scss)
 
 const MyComponent = () => {
   return <PopupMessage message="Hello World!" type="success" position="top-right" duration={5000} />
