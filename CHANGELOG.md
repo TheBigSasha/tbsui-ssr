@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.4.3](https://github.com/TheBigSasha/tbsui-ssr/compare/v1.4.2...v1.4.3) (2023-09-01)
+
+
+### Bug Fixes
+
+* change module settings ([bdc60dc](https://github.com/TheBigSasha/tbsui-ssr/commit/bdc60dcb8c915ffc90a2105a825d296627faf4c6))
+* remove exports from package.json ([af51119](https://github.com/TheBigSasha/tbsui-ssr/commit/af5111963a46f58791c5df071b95471848339cef))
+
 ## [1.4.2](https://github.com/TheBigSasha/tbsui-ssr/compare/v1.4.1...v1.4.2) (2023-09-01)
 
 
