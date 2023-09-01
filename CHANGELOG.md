@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.4.9](https://github.com/TheBigSasha/tbsui-ssr/compare/v1.4.8...v1.4.9) (2023-09-01)
+
+
+### Bug Fixes
+
+* update gray levels and padding in popup message ([1be6d68](https://github.com/TheBigSasha/tbsui-ssr/commit/1be6d685057fa1b93fc6a907e094cdc5369a775e))
+
 ## [1.4.8](https://github.com/TheBigSasha/tbsui-ssr/compare/v1.4.7...v1.4.8) (2023-09-01)
 
 
