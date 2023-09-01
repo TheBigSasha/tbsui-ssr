@@ -25,33 +25,34 @@ $gray_levels_light: (
 );
 
 @each $level, $color in $gray_levels_dark {
+  @media (prefers-color-scheme: dark){
+    .bg-gray-#{$level} {
+      background-color: map-get($gray_levels_dark, $level);
+    }
+    .text-gray-#{$level} {
+      color: map-get($gray_levels_dark, $level);
+    }
+    .border-gray-#{$level} {
+      border-color: map-get($gray_levels_dark, $level);
+    }
+    :root {
+      --gray-#{$level}: #{map-get($gray_levels_dark, $level)};
+    }
+  }
   .bg-gray-#{$level} {
-    background-color: map-get($gray_levels_dark, $level);
+    background-color: map-get($gray_levels_light, $level);
   }
   .text-gray-#{$level} {
-    color: map-get($gray_levels_dark, $level);
+    color: map-get($gray_levels_light, $level);
   }
   .border-gray-#{$level} {
-    border-color: map-get($gray_levels_dark, $level);
+    border-color: map-get($gray_levels_light, $level);
   }
   :root {
-    --gray-#{$level}: #{map-get($gray_levels_dark, $level)};
+    --gray-#{$level}: #{map-get($gray_levels_light, $level)};
   }
-  // @media (prefers-color-scheme: light) {
-  //   .bg-gray-#{$level} {
-  //     background-color: map-get($gray_levels_light, $level);
-  //   }
-  //   .text-gray-#{$level} {
-  //     color: map-get($gray_levels_light, $level);
-  //   }
-  //   .border-gray-#{$level} {
-  //     border-color: map-get($gray_levels_light, $level);
-  //   }
-  //   :root {
-  //     --gray-#{$level}: #{map-get($gray_levels_light, $level)};
-  //   }
-  // }
 }
+
 
 $text-sizes: (
   xs: 0.75rem,

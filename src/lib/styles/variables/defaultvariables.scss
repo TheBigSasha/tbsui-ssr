@@ -10,16 +10,15 @@
   --tpcard-background-color: rgba(169, 150, 207, 0.084);
   --navmenu-background-color: rgba(130,130,130,0.2);
   --background-3d-color: rgb(0,0,0);
-  --max-width: 960px;
-  --border-radius: 0.5rem;
-  --padding: 1rem;
-
-  --background-blur: blur(10px);
-
   --info-color: #21f7ec;
     --success-color: #00ff00;
     --warning-color: #ffcc00;
     --error-color: #ff0000;
+    --hover-color-navmenu: #0099ff29;
+
+
+    --background-blur: blur(10px);
+
     
     --font-family-label: 'Roboto', sans-serif;
     --font-sans: 'Manrope', sans-serif;
@@ -30,5 +29,35 @@
     --font-weight-light: 200;
 
     --tracking-condensed: -0.03em;
+
+    --header-button-height: 1.8rem;
+    --max-width: 960px;
+    --border-radius: 0.5rem;
+    --padding: 1rem;  
+    --space-md: 1rem;
+
+    @media (prefers-color-scheme: dark) {
+      --primary-color: #ff0084;
+      --secondary-color: #21f7ec;
+      --text-color: #ffffff;
+      --background-color: rgba(0, 0, 0, 0.89);
+      --second-background-color: #{rgba(lighten(#120012, 10%), 0.1)};
+      --disabled-color: hsla(0, 100%, 77%, 0.04);
+      --card-background-color: rgba(12, 2, 32, 0.89);
+      --tpcard-background-color: rgba(23, 20, 29, 0.084);
+      --navmenu-background-color: rgba(26, 10, 10, 0.746);
+      --background-3d-color: rgb(0,0,0);
+      --info-color: #21f7ec;
+        --success-color: #00ff00;
+        --warning-color: #ffcc00;
+        --error-color: #ff0000;
+        --hover-color-navmenu: #0099ff29;
+    }
 }
 
+html {
+  background-color: white;
+  @media (prefers-color-scheme: dark) {
+    background-color: black;
+  }
+}

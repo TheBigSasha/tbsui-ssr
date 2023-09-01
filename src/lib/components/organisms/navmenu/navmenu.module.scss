@@ -16,7 +16,7 @@
       }
     }
 }
-
+//https://codepen.io/i-zaplavskiy/pen/zYKQvKd
 .nav_menu{
     @keyframes navmenu_transition_slidedown {
             0%{
@@ -34,7 +34,7 @@
     display: flex;
     flex-direction: column;
     align-items: left;
-    justify-content: left;
+    justify-content: flex-start;
     width: 100%;
     background-color: var(--navmenu-background-color);
     backdrop-filter: var(--background-blur);
@@ -43,9 +43,121 @@
     height: 0vh;
     overflow: hidden;
     margin: 0;
-    padding: var(--padding)
+    padding: var(--padding);
 }
 
+.nav_menu_toggleable {
+    & > .nav_menu {
+        animation: none;
+        transition: height 0.4s ease-out;
+        transition-delay: 0;
+        background-color: rgba(0,0,0,0);
+    }
+    & .category{
+        transition: all 0.3s ease-out;
+        animation: none;
+        opacity: 1;
+        @for $i from 1 through 15 {
+            &:nth-child(#{$i}) {
+              transition-delay: $i * 0.04s + 0.2s;
+            }
+          }
+    }
+    & .link{
+        animation: none;
+        opacity: 1;
+        transition: all 0.3s ease-out;
+        @for $i from 1 through 15 {
+            &:nth-child(#{$i}) {
+              transition-delay: $i * 0.04s + 0.2s;
+            }
+          }
+    }
+    #tbsui_ssr_navmenu_toggle:checked {
+        & ~ .nav_menu {
+            height: 100vh;
+            opacity: 1;
+            transition-delay: 0;
+            background-color: var(--navmenu-background-color);
+        }
+
+        & ~ * .nav_check_rect{
+            rx: 12;
+        }
+
+        & ~ * .nav_check_x_1{
+            transition: all 0.3s ease-out;
+            transform: rotate(45deg);
+            transform-origin: center;
+            & > .nav_check_line {
+                y: 12;
+            }
+        }
+
+        & ~ * .nav_check_x_2{
+            transition: all 0.3s ease-out;
+            transform: rotate(-45deg);
+            transform-origin: center;
+            & > .nav_check_line {
+                y: 10;
+                &:nth-child(1) {
+                   opacity: 0;
+                }
+            }
+        }
+        & ~ * .nav_menu_list {
+            opacity: 1;
+            height: 100%;
+        }
+        & ~ .nav_menu_list {
+           & > .category {
+                opacity: 1;
+            }
+            & > .link {
+                opacity: 1;
+            }
+        }
+    }
+
+    #tbsui_ssr_navmenu_toggle:not(:checked) {
+        & ~ * .nav_menu {
+            height: min-content;
+            transition-delay: 0.6s;
+            transition-duration: 1s;
+            transition: background-color, height 0.4s ease-out;
+        }
+
+        & ~ * .nav_menu_list {
+            height: 0px;
+            & > .category {
+                @for $i from 1 through 15 {
+                    &:nth-child(#{$i}) {
+                      transition-delay: (15 - $i) * 0.04s;
+                    }
+                  }
+                opacity: 0;
+            }
+            & > .link {
+                opacity: 0;
+                @for $i from 1 through 15 {
+                    &:nth-child(#{$i}) {
+                      transition-delay: (15 - $i) * 0.04s;
+                    }
+                  }
+            }
+        }
+    }
+}
+
+.nav_menu_toggleable_responsive{
+    @extend .nav_menu_toggleable;
+    & .nav_menu {
+        @media(min-width: 1024px){ // .lg_or_larger
+            justify-content: center !important;
+        }
+    }
+
+}
 .nav_menu_header {
     display: flex;
     justify-content: space-between;
@@ -58,6 +170,7 @@
 .nav_menu_item{
     @include transition;
     text-align: left;
+    list-style: none;
 }
 
 .link{
@@ -81,4 +194,108 @@
     font-weight: var(--font-weight-bold);
     letter-spacing: var(--tracking-condensed);
     border-bottom: 1px solid var(--gray-600);
+}
+
+.nav_menu_list{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: left;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    transition: all 0.3s ease-out;
+
+}
+
+#tbsui_ssr_navmenu_toggle {
+    display: none;
+}
+
+.nav_check_icon {
+    cursor: pointer;
+    &:hover {
+        & > .nav_check_rect{
+            fill: var(--hover-color-navmenu);
+            rx: 2;
+        }
+    }
+    transition: all 0.3s ease-out;
+    width: 1rem;
+    height: 1rem;
+    & .nav_check_line {
+        width: 1em;
+        font-size: 22px;
+        height: 0.1em;
+        transition: all 0.3s ease-out;
+        color: var(--gray-100);
+        line-height: 1px;
+        fill: var(--gray-100);
+        stroke: none;
+        }
+    & > .nav_check_rect{
+        fill: transparent;
+    }
+}
+
+@mixin links_in {
+    @keyframes responsive_horizontal_links_in {
+        0% {
+            opacity: 0;
+            font-weight: var(--font-weight-light);
+            transform: translateX(1rem);
+        }
+        100% {
+            opacity: 1;
+            font-weight: var(--font-weight-bold);
+            transform: translateX(0);
+        }
+    }
+    animation: responsive_horizontal_links_in 0.3s ease-out;
+    animation-fill-mode: forwards;
+    opacity: 0;
+    @for $i from 1 through 15 {
+      &:nth-child(#{$i}) {
+        animation-delay: $i * 0.02s;
+      }
+    }
+}
+
+.nav_links_hor{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    gap: var(--space-md);
+    padding: 0;
+    & * {
+        margin: 0;
+        padding: 0;
+    }
+    & .link {
+        @include links_in;
+        padding: 0 !important;
+        font-size: var(--font-size-sm);
+        font-weight: var(--font-weight-bold);
+        font-family: var(--font-sans);
+        color: var(--gray-300);
+        font-variant-caps: all-petite-caps;
+        margin: 0;
+        text-decoration: none;
+        & a {
+            padding: 0;
+        }
+        & > .nav_link_icon {
+            width: 1rem;
+            height: 1rem;
+            fill: var(--gray-100);
+            stroke: none;
+            transition: all 0.3s ease-out;
+        }
+    }
 }
