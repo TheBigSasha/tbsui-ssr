@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.1](https://github.com/TheBigSasha/tbsui-ssr/compare/v1.3.0...v1.3.1) (2023-09-01)
+
+
+### Bug Fixes
+
+* fix exports ([df09962](https://github.com/TheBigSasha/tbsui-ssr/commit/df0996232f15fbcc4106bcf0a9aec1e2d0494971))
+
 ## [1.3.0](https://github.com/TheBigSasha/tbsui-ssr/compare/v1.2.0...v1.3.0) (2023-09-01)
 
 
