@@ -4,6 +4,9 @@ import { defineConfig } from 'vitest/config'
 import dts from 'vite-plugin-dts'
 import { UserConfigExport } from 'vite'
 import { name } from './package.json'
+import sassDts from 'vite-plugin-sass-dts'
+
+//TOOD: https://rollupjs.org/configuration-options/ see glob section for input so we can split up the components and styles into individual js and css files
 
 const app = async (): Promise<UserConfigExport> => {
   return defineConfig({
@@ -12,6 +15,7 @@ const app = async (): Promise<UserConfigExport> => {
       dts({
         insertTypesEntry: true,
       }),
+      sassDts(),
     ],
     css: {
       modules: {
@@ -24,19 +28,28 @@ const app = async (): Promise<UserConfigExport> => {
       sourcemap: false,
       cssCodeSplit: true,
       lib: {
-        entry: [path.resolve(__dirname, 'src/lib/index.ts'), path.resolve(__dirname, 'src/lib/styles/index.ts')],
+        entry: {
+          index: path.resolve(__dirname, 'src/lib/index.ts'),
+          styles: path.resolve(__dirname, 'src/lib/styles/index.ts'),
+          components: path.resolve(__dirname, 'src/lib/components/index.ts'),
+        },
         name,
         formats: ['es'],
         fileName: (format) => `${name}.${format}.js`,
       },
       rollupOptions: {
+        input: {
+          index: path.resolve(__dirname, 'src/lib/index.ts'),
+          styles: path.resolve(__dirname, 'src/lib/styles/index.ts'),
+          components: path.resolve(__dirname, 'src/lib/components/index.ts'),
+        },
         external: [
           'react',
           'react/jsx-runtime',
           'react-dom',
-          'src/lib/styles/default-variables.scss',
-          'default-variables.scss',
-          'tailwind-compatible.scss',
+          ...Object.keys(require('./package.json').dependencies || {}),
+          ...Object.keys(require('./package.json').peerDependencies || {}),
+          ...Object.keys(require('./package.json').devDependencies || {}),
         ],
         output: {
           globals: {
