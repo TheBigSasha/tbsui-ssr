@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.4.15](https://github.com/TheBigSasha/tbsui-ssr/compare/v1.4.14...v1.4.15) (2023-09-01)
+
+
+### Bug Fixes
+
+* flex start header items ([27d0f13](https://github.com/TheBigSasha/tbsui-ssr/commit/27d0f13818b56bf6ff55381f2cc275b7d9af4a06))
+
 ## [1.4.14](https://github.com/TheBigSasha/tbsui-ssr/compare/v1.4.13...v1.4.14) (2023-09-01)
 
 
