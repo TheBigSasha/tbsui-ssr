@@ -3,7 +3,7 @@
   "author": "thebigsasha <sasha@sashaphoto.ca>",
   "description": "A React component library which is capable of being deployed with javascript on the client.",
   "private": false,
-  "version": "1.4.0",
+  "version": "1.4.1",
   "packageManager": "pnpm@8.4.0",
   "main": "./dist/tbsui-ssr.umd.js",
   "module": "./dist/tbsui-ssr.es.js",
