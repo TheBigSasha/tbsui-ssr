@@ -89,20 +89,19 @@
     & ~ * .nav_check_x_1 {
       transition: all 0.3s ease-out;
       transform: rotate(45deg);
-      transform-origin: center;
       & > .nav_check_line {
-        y:  50%;
-        x:  2px;
+        y:  -2px;
+        x:  4px;
       }
     }
 
     & ~ * .nav_check_x_2 {
       transition: all 0.3s ease-out;
       transform: rotate(-45deg);
-      transform-origin: center;
+      // transform-origin: center;
       & > .nav_check_line {
-        y: 50%;
-        x: 0px;
+        y: calc(50% + 2px);
+        x: calc(-50% + 2px);
         &:nth-child(1) {
           opacity: 0;
         }
