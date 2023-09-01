@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.0](https://github.com/TheBigSasha/tbsui-ssr/compare/v1.1.0...v1.2.0) (2023-09-01)
+
+
+### Features
+
+* nav component updates + prettier ([cd1b060](https://github.com/TheBigSasha/tbsui-ssr/commit/cd1b0606a6b275b8c1bbac38fe10cca604c899ee))
+
 ## [1.1.0](https://github.com/TheBigSasha/tbsui-ssr/compare/v1.0.0...v1.1.0) (2023-08-29)
 
 ### Features
