@@ -47,17 +47,29 @@ const app = async (): Promise<UserConfigExport> => {
           ...Object.keys(require('./package.json').peerDependencies || {}),
           ...Object.keys(require('./package.json').devDependencies || {}),
         ],
-        input: Object.fromEntries(
-          // https://rollupjs.org/configuration-options/#input
-          glob.sync('src/**/index.{ts,tsx}').map((file) => [
-            // 1. The name of the entry point
-            // lib/nested/foo.js becomes nested/foo
-            relative('src/lib', file.slice(0, file.length - extname(file).length)),
-            // 2. The absolute path to the entry file
-            // lib/nested/foo.ts becomes /project/lib/nested/foo.ts
-            fileURLToPath(new URL(file, import.meta.url)),
-          ]),
-        ),
+        input: {
+          ...Object.fromEntries(
+            // https://rollupjs.org/configuration-options/#input
+            glob.sync('src/**/index.{ts,tsx}').map((file) => [
+              // 1. The name of the entry point
+              // lib/nested/foo.js becomes nested/foo
+              relative('src/lib', file.slice(0, file.length - extname(file).length)),
+              // 2. The absolute path to the entry file
+              // lib/nested/foo.ts becomes /project/lib/nested/foo.ts
+              fileURLToPath(new URL(file, import.meta.url)),
+            ]),
+          ),
+          // ...Object.fromEntries(
+          //   glob.sync('src/**/*.{scss, css}').map((file) => [
+          //     // 1. The name of the entry point
+          //     // lib/nested/foo.js becomes nested/foo
+          //     relative('src/lib', file.slice(0, file.length - extname(file).length)),
+          //     // 2. The absolute path to the entry file
+          //     // lib/nested/foo.ts becomes /project/lib/nested/foo.ts
+          //     fileURLToPath(new URL(file, import.meta.url)),
+          //   ]),
+          // ),
+        },
 
         output: {
           globals: {
@@ -65,12 +77,16 @@ const app = async (): Promise<UserConfigExport> => {
             'react/jsx-runtime': 'react/jsx-runtime',
             'react-dom': 'ReactDOM',
           },
-          assetFileNames: 'assets/[name][extname]',
+          assetFileNames: (assetInfo) => {
+            const name = (assetInfo.name || '[hash]').replace(/(\.module.css)/, '.css')
+            return `assets/${name}`
+          },
           entryFileNames: '[name].js',
-          // preserveModules: true,
+          preserveModules: true,
         },
       },
       cssMinify: 'lightningcss',
+      cssCodeSplit: true,
     },
     test: {
       globals: true,
