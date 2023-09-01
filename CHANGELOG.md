@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.4.6](https://github.com/TheBigSasha/tbsui-ssr/compare/v1.4.5...v1.4.6) (2023-09-01)
+
+
+### Bug Fixes
+
+* remove false modules ([3cd8b2f](https://github.com/TheBigSasha/tbsui-ssr/commit/3cd8b2fe007990b3ae90c4c13218bcc4fc959424))
+
 ## [1.4.5](https://github.com/TheBigSasha/tbsui-ssr/compare/v1.4.4...v1.4.5) (2023-09-01)
 
 
