@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.4.4](https://github.com/TheBigSasha/tbsui-ssr/compare/v1.4.3...v1.4.4) (2023-09-01)
+
+
+### Bug Fixes
+
+* preserve css modules ([17737fa](https://github.com/TheBigSasha/tbsui-ssr/commit/17737fa2491a8e654104bc8dc8fb6de1e1d3deaa))
+* transition for hover effect for navmenu toggle ([3578bc5](https://github.com/TheBigSasha/tbsui-ssr/commit/3578bc5b68a373afa2de502bdc79dafdc0f5a947))
+
 ## [1.4.3](https://github.com/TheBigSasha/tbsui-ssr/compare/v1.4.2...v1.4.3) (2023-09-01)
 
 
