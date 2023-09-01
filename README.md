@@ -10,7 +10,7 @@ A library of components which can all be shipped with zero javascript using Next
 - Use custom hooks that depend on state, effects, or browser-only APIs
 
 ## Customization
-Override default scss variables to style the library!
+Override default scss variables to style the library! If you want to use default values, import 'defaultvalues.scss'
 
 ## Features
 
