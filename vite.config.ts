@@ -24,7 +24,7 @@ const app = async (): Promise<UserConfigExport> => {
         },
         rollupOptions: {
           output: {
-            assetFileNames: 'assets/[hash].module[extname]',
+            assetFileNames: 'assets/[hash][extname]',
           },
         },
       }),
@@ -35,7 +35,6 @@ const app = async (): Promise<UserConfigExport> => {
       },
     },
     build: {
-      copyPublicDir: false,
       cssCodeSplit: true,
       lib: {
         entry: resolve(__dirname, 'src/lib/index.ts'),
