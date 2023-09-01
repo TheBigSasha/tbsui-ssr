@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.4.12](https://github.com/TheBigSasha/tbsui-ssr/compare/v1.4.11...v1.4.12) (2023-09-01)
+
+
+### Bug Fixes
+
+* more big zindex for navmenu ([590c798](https://github.com/TheBigSasha/tbsui-ssr/commit/590c7984ef04f081c043dd3ee0f7def27937ec69))
+
 ## [1.4.11](https://github.com/TheBigSasha/tbsui-ssr/compare/v1.4.10...v1.4.11) (2023-09-01)
 
 
