@@ -162,6 +162,10 @@
     @media (min-width: 1024px) {
       // .lg_or_larger
       justify-content: center !important;
+      & .nav_menu_header {
+        margin-top: 0;
+        margin-bottom: 0;  
+      }
     }
   }
 }
