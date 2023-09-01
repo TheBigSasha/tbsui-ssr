@@ -2,12 +2,11 @@ import react from '@vitejs/plugin-react'
 import { defineConfig } from 'vitest/config'
 import dts from 'vite-plugin-dts'
 import { UserConfigExport } from 'vite'
-import { name } from './package.json'
 import sassDts from 'vite-plugin-sass-dts'
-import { libInjectCss } from 'vite-plugin-lib-inject-css'
 import { extname, relative, resolve } from 'path'
 import { fileURLToPath } from 'node:url'
 import { glob } from 'glob'
+import { libInjectCss, scanEntries } from 'vite-plugin-lib-inject-css'
 
 const app = async (): Promise<UserConfigExport> => {
   return defineConfig({
@@ -17,17 +16,27 @@ const app = async (): Promise<UserConfigExport> => {
         insertTypesEntry: true,
       }),
       sassDts(),
-      libInjectCss(),
       dts({ include: ['lib'] }),
+      libInjectCss({
+        entry: {
+          index: 'src/lib/index.ts', // Don't forget the main entry!
+          ...scanEntries(['src/lib']),
+        },
+        rollupOptions: {
+          output: {
+            assetFileNames: 'assets/[hash].module[extname]',
+          },
+        },
+      }),
     ],
     css: {
       modules: {
-        scopeBehaviour: 'local',
-        hashPrefix: 'tbsui-ssr',
+        generateScopedName: 'tbsui-[hash:base64:6]',
       },
     },
     build: {
       copyPublicDir: false,
+      cssCodeSplit: true,
       lib: {
         entry: resolve(__dirname, 'src/lib/index.ts'),
         formats: ['es'],
@@ -61,7 +70,7 @@ const app = async (): Promise<UserConfigExport> => {
           },
           assetFileNames: 'assets/[name][extname]',
           entryFileNames: '[name].js',
-          preserveModules: true,
+          // preserveModules: true,
         },
       },
       cssMinify: 'lightningcss',
