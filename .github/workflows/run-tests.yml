@@ -7,27 +7,27 @@ on:
     branches: ['master', 'main']
 
 jobs:
-    test:
-        runs-on: ubuntu-latest
-        steps:    
-          - name: Checkout
-            uses: actions/checkout@v3
-    
-          - name: Install pnpm
-            uses: pnpm/action-setup@v2
-            with:
-              version: 8
-    
-          # Setup .npmrc file to publish to npm
-          - name: Setup Node
-            uses: actions/setup-node@v3
-            with:
-              node-version: '18.x'
-              registry-url: 'https://registry.npmjs.org'
-              cache: 'pnpm'
-    
-          - name: CI
-            run: pnpm install --frozen-lockfile
-    
-          - name: Build
-            run: pnpm test
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: 8
+
+      # Setup .npmrc file to publish to npm
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18.x'
+          registry-url: 'https://registry.npmjs.org'
+          cache: 'pnpm'
+
+      - name: CI
+        run: pnpm install --frozen-lockfile
+
+      - name: Build
+        run: pnpm test
