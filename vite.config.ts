@@ -5,8 +5,10 @@ import dts from 'vite-plugin-dts'
 import { UserConfigExport } from 'vite'
 import { name } from './package.json'
 import sassDts from 'vite-plugin-sass-dts'
-
-//TOOD: https://rollupjs.org/configuration-options/ see glob section for input so we can split up the components and styles into individual js and css files
+import { libInjectCss } from 'vite-plugin-lib-inject-css'
+import { extname, relative } from 'path'
+import { fileURLToPath } from 'node:url'
+import { glob } from 'glob'
 
 const app = async (): Promise<UserConfigExport> => {
   return defineConfig({
@@ -16,12 +18,12 @@ const app = async (): Promise<UserConfigExport> => {
         insertTypesEntry: true,
       }),
       sassDts(),
+      libInjectCss(),
     ],
     css: {
       modules: {
         scopeBehaviour: 'local',
         hashPrefix: 'tbsui-ssr',
-        localsConvention: 'camelCaseOnly',
       },
     },
     build: {
@@ -31,18 +33,22 @@ const app = async (): Promise<UserConfigExport> => {
         entry: {
           index: path.resolve(__dirname, 'src/lib/index.ts'),
           styles: path.resolve(__dirname, 'src/lib/styles/index.ts'),
-          components: path.resolve(__dirname, 'src/lib/components/index.ts'),
         },
         name,
         formats: ['es'],
         fileName: (format) => `${name}.${format}.js`,
       },
       rollupOptions: {
-        input: {
-          index: path.resolve(__dirname, 'src/lib/index.ts'),
-          styles: path.resolve(__dirname, 'src/lib/styles/index.ts'),
-          components: path.resolve(__dirname, 'src/lib/components/index.ts'),
-        },
+        input: Object.fromEntries(
+          glob.sync('src/lib/**/index.{ts,tsx}').map((file) => [
+            // The name of the entry point
+            // lib/nested/foo.ts becomes nested/foo
+            relative('lib', file.slice(0, file.length - extname(file).length)),
+            // The absolute path to the entry file
+            // lib/nested/foo.ts becomes /project/lib/nested/foo.ts
+            fileURLToPath(new URL(file, import.meta.url)),
+          ]),
+        ),
         external: [
           'react',
           'react/jsx-runtime',
@@ -57,6 +63,8 @@ const app = async (): Promise<UserConfigExport> => {
             'react/jsx-runtime': 'react/jsx-runtime',
             'react-dom': 'ReactDOM',
           },
+          assetFileNames: 'assets/[name][extname]',
+          entryFileNames: '[name].js',
         },
       },
       cssMinify: 'lightningcss',
