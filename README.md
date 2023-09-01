@@ -13,7 +13,7 @@ A library of components which can all be shipped with zero javascript using Next
 
 - ⚛️ [React 18](https://reactjs.org/)
 - 📚 [Storybook 7](https://storybook.js.org/) - Components preview
-- 🖌️ [Tailwind CSS 3](https://tailwindcss.com/)
+- 🖌️ SCSS Modules
 - ⏩ [Vite](https://vitejs.dev/) - Run and build the project blazingly fast!
 - ⚡ [Vitest](https://vitest.dev/) - Components Unit Testing
 - 📐 [ESLint](https://eslint.org/) & [Prettier](https://prettier.io/) - Formatting and Linting
