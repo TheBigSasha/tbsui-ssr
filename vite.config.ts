@@ -59,16 +59,16 @@ const app = async (): Promise<UserConfigExport> => {
               fileURLToPath(new URL(file, import.meta.url)),
             ]),
           ),
-          // ...Object.fromEntries(
-          //   glob.sync('src/**/*.{scss, css}').map((file) => [
-          //     // 1. The name of the entry point
-          //     // lib/nested/foo.js becomes nested/foo
-          //     relative('src/lib', file.slice(0, file.length - extname(file).length)),
-          //     // 2. The absolute path to the entry file
-          //     // lib/nested/foo.ts becomes /project/lib/nested/foo.ts
-          //     fileURLToPath(new URL(file, import.meta.url)),
-          //   ]),
-          // ),
+          ...Object.fromEntries(
+            glob.sync('src/**/{default-variables, tailwind-compatible}.scss').map((file) => [
+              // 1. The name of the entry point
+              // lib/nested/foo.js becomes nested/foo
+              relative('src/lib', file.slice(0, file.length - extname(file).length)),
+              // 2. The absolute path to the entry file
+              // lib/nested/foo.ts becomes /project/lib/nested/foo.ts
+              fileURLToPath(new URL(file, import.meta.url)),
+            ]),
+          ),
         },
 
         output: {
