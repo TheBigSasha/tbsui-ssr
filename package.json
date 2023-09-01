@@ -64,6 +64,7 @@
   },
   "homepage": "https://thebigsasha.github.io/tbsui-ssr/",
   "dependencies": {
+    "lightningcss": "^1.21.7",
     "postcss-modules": "^6.0.0",
     "postcss-nested": "^6.0.1",
     "react": "18.2.0",

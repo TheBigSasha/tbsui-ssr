@@ -16,15 +16,17 @@ const app = async (): Promise<UserConfigExport> => {
     css: {
       modules: {
         scopeBehaviour: 'local',
-        hashPrefix: 'tbsui-ssr-r44fy4',
+        hashPrefix: 'tbsui-ssr',
         localsConvention: 'camelCaseOnly',
       },
     },
     build: {
+      sourcemap: false,
+      cssCodeSplit: true,
       lib: {
-        entry: path.resolve(__dirname, 'src/lib/index.ts'),
+        entry: [path.resolve(__dirname, 'src/lib/index.ts'), path.resolve(__dirname, 'src/lib/styles/index.ts')],
         name,
-        formats: ['es', 'umd'],
+        formats: ['es'],
         fileName: (format) => `${name}.${format}.js`,
       },
       rollupOptions: {
@@ -44,6 +46,7 @@ const app = async (): Promise<UserConfigExport> => {
           },
         },
       },
+      cssMinify: 'lightningcss',
     },
     test: {
       globals: true,
