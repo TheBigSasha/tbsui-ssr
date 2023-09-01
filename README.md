@@ -10,7 +10,27 @@ A library of components which can all be shipped with zero javascript using Next
 - Use custom hooks that depend on state, effects, or browser-only APIs
 
 ## Customization
-Override default scss variables to style the library! If you want to use default values, import `defaultvalues.scss`
+
+Override default scss variables to style the library! If you want to use default values, import `default-values.scss`
+
+## Installation
+
+```bash
+pnpm i tbsui-ssr
+```
+
+## Usage
+
+**important** You must specify css variables to theme this library, and provide a `tailwind-compatible.scss` file which defines tailwind-style values (or use the `default-variables.scss` file from tbsui-ssr).
+
+```tsx
+import { PopupMessage } from 'tbsui-ssr'
+import 'my-variables.scss'
+
+const MyComponent = () => {
+  return <PopupMessage message="Hello World!" type="success" position="top-right" duration={5000} />
+}
+```
 
 ## Features
 

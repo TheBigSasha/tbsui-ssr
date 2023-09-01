@@ -14,7 +14,11 @@ const app = async (): Promise<UserConfigExport> => {
       }),
     ],
     css: {
-      postcss: {},
+      modules: {
+        scopeBehaviour: 'local',
+        hashPrefix: 'tbsui-ssr-r44fy4',
+        localsConvention: 'camelCaseOnly',
+      },
     },
     build: {
       lib: {
@@ -24,7 +28,14 @@ const app = async (): Promise<UserConfigExport> => {
         fileName: (format) => `${name}.${format}.js`,
       },
       rollupOptions: {
-        external: ['react', 'react/jsx-runtime', 'react-dom'],
+        external: [
+          'react',
+          'react/jsx-runtime',
+          'react-dom',
+          'src/lib/styles/default-variables.scss',
+          'default-variables.scss',
+          'tailwind-compatible.scss',
+        ],
         output: {
           globals: {
             react: 'React',
