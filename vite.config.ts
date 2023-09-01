@@ -6,7 +6,7 @@ import { UserConfigExport } from 'vite'
 import { name } from './package.json'
 import sassDts from 'vite-plugin-sass-dts'
 import { libInjectCss } from 'vite-plugin-lib-inject-css'
-import { extname, relative } from 'path'
+import { extname, relative, resolve } from 'path'
 import { fileURLToPath } from 'node:url'
 import { glob } from 'glob'
 
@@ -19,6 +19,7 @@ const app = async (): Promise<UserConfigExport> => {
       }),
       sassDts(),
       libInjectCss(),
+      dts({ include: ['lib'] }),
     ],
     css: {
       modules: {
@@ -27,28 +28,12 @@ const app = async (): Promise<UserConfigExport> => {
       },
     },
     build: {
-      sourcemap: false,
-      cssCodeSplit: true,
+      copyPublicDir: false,
       lib: {
-        entry: {
-          index: path.resolve(__dirname, 'src/lib/index.ts'),
-          styles: path.resolve(__dirname, 'src/lib/styles/index.ts'),
-        },
-        name,
+        entry: resolve(__dirname, 'src/lib/index.ts'),
         formats: ['es'],
-        fileName: (format) => `${name}.${format}.js`,
       },
       rollupOptions: {
-        input: Object.fromEntries(
-          glob.sync('src/lib/**/index.{ts,tsx}').map((file) => [
-            // The name of the entry point
-            // lib/nested/foo.ts becomes nested/foo
-            relative('lib', file.slice(0, file.length - extname(file).length)),
-            // The absolute path to the entry file
-            // lib/nested/foo.ts becomes /project/lib/nested/foo.ts
-            fileURLToPath(new URL(file, import.meta.url)),
-          ]),
-        ),
         external: [
           'react',
           'react/jsx-runtime',
@@ -57,6 +42,18 @@ const app = async (): Promise<UserConfigExport> => {
           ...Object.keys(require('./package.json').peerDependencies || {}),
           ...Object.keys(require('./package.json').devDependencies || {}),
         ],
+        input: Object.fromEntries(
+          // https://rollupjs.org/configuration-options/#input
+          glob.sync('src/**/index.{ts,tsx}').map((file) => [
+            // 1. The name of the entry point
+            // lib/nested/foo.js becomes nested/foo
+            relative('src/lib', file.slice(0, file.length - extname(file).length)),
+            // 2. The absolute path to the entry file
+            // lib/nested/foo.ts becomes /project/lib/nested/foo.ts
+            fileURLToPath(new URL(file, import.meta.url)),
+          ]),
+        ),
+
         output: {
           globals: {
             react: 'React',
