@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.4.14](https://github.com/TheBigSasha/tbsui-ssr/compare/v1.4.13...v1.4.14) (2023-09-01)
+
+
+### Bug Fixes
+
+* margin hack removed for desktop size ([99a226b](https://github.com/TheBigSasha/tbsui-ssr/commit/99a226b36a596d2c6b01a6ba7b9d52cfaf12cc61))
+
 ## [1.4.13](https://github.com/TheBigSasha/tbsui-ssr/compare/v1.4.12...v1.4.13) (2023-09-01)
 
 
