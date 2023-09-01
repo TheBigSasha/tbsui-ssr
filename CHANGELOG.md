@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.4.0](https://github.com/TheBigSasha/tbsui-ssr/compare/v1.3.1...v1.4.0) (2023-09-01)
+
+
+### Features
+
+* update css bundling ([7f1896a](https://github.com/TheBigSasha/tbsui-ssr/commit/7f1896aa83e33b61dcb5506839067164ea7c552e))
+
 ## [1.3.1](https://github.com/TheBigSasha/tbsui-ssr/compare/v1.3.0...v1.3.1) (2023-09-01)
 
 
