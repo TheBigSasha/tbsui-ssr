@@ -15,9 +15,27 @@ export interface NavMenuProps {
   links: NavMenuEntry[]
   headerLeft?: ReactNode
   headerRight?: ReactNode
+  fillScreen?: 'always' | 'mobile' | 'never'
 }
 
-export const NavMenu: FC<NavMenuProps> = ({ links, headerLeft, headerRight }) => {
+const Gap: FC<{ type: 'always' | 'mobile' | 'never' }> = ({ type }) => {
+  if (type === 'always') {
+    return <li className={styles.gap} />
+  }
+  if (type === 'mobile') {
+    return (
+      <li className={responsive.lg_or_smaller}>
+        <div className={styles.gap} />
+      </li>
+    )
+  }
+  if (type === 'never') {
+    return null
+  }
+  return null
+}
+
+export const NavMenu: FC<NavMenuProps> = ({ links, headerLeft, headerRight, fillScreen = 'mobile' }) => {
   return (
     <nav className={styles.nav_menu}>
       <div className={styles.nav_menu_header}>
@@ -38,6 +56,7 @@ export const NavMenu: FC<NavMenuProps> = ({ links, headerLeft, headerRight }) =>
             </li>
           )
         })}
+        {<Gap type={fillScreen} />}
       </ul>
     </nav>
   )
@@ -47,9 +66,15 @@ export interface ToggleNavMenuProps {
   links: NavMenuEntry[]
   headerItem?: ReactNode
   headerItemPosition?: 'left' | 'right'
+  fillScreen?: 'always' | 'mobile' | 'never'
 }
 
-export const ToggleNavMenu: FC<ToggleNavMenuProps> = ({ links, headerItem, headerItemPosition }) => {
+export const ToggleNavMenu: FC<ToggleNavMenuProps> = ({
+  links,
+  headerItem,
+  headerItemPosition,
+  fillScreen = 'mobile',
+}) => {
   const getRectY = (index: number) => index * (18 / 2) + 2
   return (
     <nav className={styles.nav_menu_toggleable}>
@@ -92,13 +117,19 @@ export const ToggleNavMenu: FC<ToggleNavMenuProps> = ({ links, headerItem, heade
               </li>
             )
           })}
+          {<Gap type={fillScreen} />}
         </ul>
       </div>
     </nav>
   )
 }
 
-export const ResponsiveNavMenu: FC<ToggleNavMenuProps> = ({ links, headerItem, headerItemPosition }) => {
+export const ResponsiveNavMenu: FC<ToggleNavMenuProps> = ({
+  links,
+  headerItem,
+  headerItemPosition,
+  fillScreen = 'mobile',
+}) => {
   const getRectY = (index: number) => index * (18 / 2) + 2
   return (
     <nav className={styles.nav_menu_toggleable_responsive}>
@@ -155,6 +186,7 @@ export const ResponsiveNavMenu: FC<ToggleNavMenuProps> = ({ links, headerItem, h
               </li>
             )
           })}
+          {<Gap type={fillScreen} />}
         </ul>
       </div>
     </nav>

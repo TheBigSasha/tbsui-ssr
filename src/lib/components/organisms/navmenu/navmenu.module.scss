@@ -223,6 +223,7 @@
   list-style: none;
   transition: all 0.3s ease-out;
   margin-top: var(--space-sm);
+  max-height: 100vh;
 }
 
 #tbsui_ssr_navmenu_toggle {
@@ -318,4 +319,8 @@
 
 .nav_check_rect {
   transition: all 0.3s ease-out;
+}
+
+.gap {
+  height: 100vh;
 }
