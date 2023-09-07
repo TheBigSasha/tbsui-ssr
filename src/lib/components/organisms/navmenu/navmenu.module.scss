@@ -24,27 +24,28 @@
   }
   @keyframes navmenu_transition_slidedown {
     0% {
-      height: 10vh;
+      max-height: 0px;
       opacity: 0;
     }
     50% {
-      height: 50vh;
+      max-height: 10vh;
       opacity: 1;
     }
     100% {
-      height: 100vh;
+      max-height: 100vh;
     }
   }
   display: flex;
   flex-direction: column;
-  align-items: left;
+  align-items: flex-start;
   justify-content: flex-start;
   width: 100%;
   background-color: var(--navmenu-background-color);
   backdrop-filter: var(--background-blur);
   animation: navmenu_transition_slidedown 0.3s ease-out;
   animation-fill-mode: forwards;
-  height: 0vh;
+  height: max-content;
+  max-height: 0vh;
   overflow: hidden;
   margin: 0;
   padding: var(--padding);
@@ -53,7 +54,7 @@
 .nav_menu_toggleable {
   & > .nav_menu {
     animation: none;
-    transition: height 0.4s ease-out;
+    transition: max-height 0.4s ease-out;
     transition-delay: 0;
     background-color: rgba(0, 0, 0, 0);
   }
@@ -79,9 +80,9 @@
   }
   #tbsui_ssr_navmenu_toggle:checked {
     & ~ .nav_menu {
-      height: 100vh;
+      max-height: 100vh;
       opacity: 1;
-      transition-delay: 0;
+      transition-delay: 0s;
       background-color: var(--navmenu-background-color);
     }
 
@@ -131,7 +132,7 @@
       transition-duration: 1s;
       transition:
         background-color,
-        height 0.4s ease-out;
+        max-height ease-out;
     }
 
     & ~ * .nav_menu_list {
@@ -139,7 +140,7 @@
       & > .category {
         @for $i from 1 through 15 {
           &:nth-child(#{$i}) {
-            transition-delay: (15 - $i) * 0.04s;
+            transition-delay: (15 - $i) * 0s;
           }
         }
         opacity: 0;
@@ -148,7 +149,7 @@
         opacity: 0;
         @for $i from 1 through 15 {
           &:nth-child(#{$i}) {
-            transition-delay: (15 - $i) * 0.04s;
+            transition-delay: (15 - $i) * 0s;
           }
         }
       }
@@ -164,7 +165,7 @@
       justify-content: center !important;
       & .nav_menu_header {
         margin-top: 0;
-        margin-bottom: 0;  
+        margin-bottom: 0;
       }
     }
   }
@@ -172,7 +173,7 @@
 .nav_menu_header {
   display: flex;
   justify-content: space-between;
-  align-items: flex-st;
+  align-items: flex-start;
   align-self: center;
   justify-self: center;
   padding: 0;
