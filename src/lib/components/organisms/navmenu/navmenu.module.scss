@@ -24,7 +24,7 @@
   }
   @keyframes navmenu_transition_slidedown {
     0% {
-      max-height: 0px;
+      max-height: 0;
       opacity: 0;
     }
     50% {
@@ -45,7 +45,7 @@
   animation: navmenu_transition_slidedown 0.3s ease-out;
   animation-fill-mode: forwards;
   height: max-content;
-  max-height: 0vh;
+  max-height: 0;
   overflow: hidden;
   margin: 0;
   padding: var(--padding);
@@ -55,7 +55,7 @@
   & > .nav_menu {
     animation: none;
     transition: max-height 0.4s ease-out;
-    transition-delay: 0;
+    transition-delay: 0s;
     background-color: rgba(0, 0, 0, 0);
   }
   & .category {
