@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.5.0](https://github.com/TheBigSasha/tbsui-ssr/compare/v1.4.16...v1.5.0) (2023-09-07)
+
+
+### Features
+
+* don't fit screen navmenu ([059067f](https://github.com/TheBigSasha/tbsui-ssr/commit/059067f59877bee3ea0614260e204839ca1247f0))
+* don't fit screen navmenu (changeable by prop) ([56befe0](https://github.com/TheBigSasha/tbsui-ssr/commit/56befe09433cb933298f681ffce433fde223c959))
+
+
+### Bug Fixes
+
+* fix css units ([151c497](https://github.com/TheBigSasha/tbsui-ssr/commit/151c4979513ed29e12ff7bee403022b79c4f0960))
+
 ## [1.4.16](https://github.com/TheBigSasha/tbsui-ssr/compare/v1.4.15...v1.4.16) (2023-09-01)
 
 
