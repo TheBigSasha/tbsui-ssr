@@ -40,6 +40,7 @@ Primary.args = {
     .fill(0)
     .map((_, index) => <SampleLayer index={index} />),
   isControllingLayerSizing: true,
+  isExpanded: true,
 }
 
 export const EightCards = Template.bind({})
@@ -49,4 +50,5 @@ EightCards.args = {
     .fill(0)
     .map((_, index) => <SampleLayer index={index} />),
   isControllingLayerSizing: true,
+  isExpanded: true,
 }

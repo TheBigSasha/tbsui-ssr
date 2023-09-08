@@ -5,22 +5,25 @@ export interface LayersViewProps {
   layers: Array<ReactNode>
   width?: number
   isControllingLayerSizing?: boolean
+  isExpanded?: boolean
 }
 
-export const LayersView: FC<LayersViewProps> = ({ layers, width, isControllingLayerSizing }) => {
+export const LayersView: FC<LayersViewProps> = ({ layers, width, isControllingLayerSizing, isExpanded }) => {
   const style = {
-    width: width ? `${width}px` : undefined,
-    height: 'fit-content',
+    maxWidth: width ? `${width}px` : undefined,
   }
 
   return (
-    <div className={styles.layers_view}>
+    <div className={isExpanded ? styles.layers_view : styles.layers_view_flat} style={style}>
       {layers.map((layer, index) => {
         return (
           <div
             key={index}
-            className={[styles.layer, isControllingLayerSizing ? styles.sizeRecommendation : ''].join(' ')}
-            style={style}
+            className={[
+              isExpanded ? styles.layer : styles.layer_flat,
+              isControllingLayerSizing ? styles.sizeRecommendation : '',
+            ].join(' ')}
+            // style={style}
           >
             {layer}
           </div>
