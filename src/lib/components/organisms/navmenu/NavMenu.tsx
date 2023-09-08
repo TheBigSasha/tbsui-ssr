@@ -192,3 +192,5 @@ export const ResponsiveNavMenu: FC<ToggleNavMenuProps> = ({
     </nav>
   )
 }
+
+export const NAV_MENU_TOGGLE_ID = styles.tbsui_ssr_navmenu_toggle
