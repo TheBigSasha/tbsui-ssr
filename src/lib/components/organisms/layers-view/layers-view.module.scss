@@ -1,70 +1,49 @@
 .layers_view{
   display: flex;
   position: relative;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   max-width: 100vw;
-  height: 100%;
-  @media (max-width: 700px){
-    height: 750px;
-  }
-  background: var(--background-color);
-  overflow: visible;
-  perspective: 500px;
-  color: var(--gray-500);
-  background: red;
+  gap: -50px;
+  height: 500px;
+  perspective: 600px;
 }
 
 .layer{
-    display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100%;
-  transition: all 0.5s ease-in-out;
+  aspect-ratio: 1;
+  max-width: 600px;
+  flex: 1 auto;
+  transition: all 1s ease-in-out;
+  &:first-child{
+    margin-top: 0 !important;
+  }
+
+  &:not(:first-child){
+    margin-top: -110%;
+  }
+
   @for $i from 1 through 8 {
-    z-index: $i + 10;
+    @keyframes mobi_cascade_#{$i} {
+      0% {
+        transform: translateZ(0);
+        margin-top: -100%;
+      }
+      100% {
+        transform: translateZ(($i - 1) * 30px);
+        margin-top: -50%;
+      }
+    }
     &:nth-child(#{$i}) {
-      @keyframes rotateExpand#{$i} {
-        0% {
-          transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg) translateX(0px) translateY(0px) translateZ(0px) scale(1);
-          left: 0px;
-        }
-        100% {
-          transform:  translateZ($i * 5px) rotateY(5deg)  scale(0.5);
-          left: calc(($i - 5) * 6% + 15px);
-          top: calc(15px * $i - 33%);
-        }
-      }
-      animation: rotateExpand#{$i} 0.5s forwards ease-in-out;
-      animation-delay: 0.5s;
+      animation: mobi_cascade_#{$i} 1s forwards ease-in-out;
+      animation-delay: 1s;
     }
   }
-  @media (max-width: 700px){
-    @for $i from 1 through 8 {
-      z-index: $i + 10;
-      &:nth-child(#{$i}) {
-        @keyframes rotateExpand#{$i} {
-          0% {
-            transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg) translateX(0px) translateY(0px) translateZ(0px) scale(1);
-            left: 0px;
-          }
-          100% {
-            transform:  translateZ($i * 5px) rotateX(-2deg - 1deg * $i)  scale(0.7);
-            left: 0;
-            top: calc(40px * $i - 10%);
-          }
-        }
-        animation: rotateExpand#{$i} 0.5s forwards ease-in-out;
-        animation-delay: 0.5s;
-      }
-    }
+  &:active {
+    transform: translateZ(300px) !important;
+    z-index: 9999;
   }
+
 }
 
 

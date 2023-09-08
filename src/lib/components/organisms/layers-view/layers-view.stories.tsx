@@ -21,7 +21,7 @@ const SampleLayer = ({ index }: { index: number }) => {
         )})`,
         width: '100%',
         height: '100%',
-        opacity: 0.7,
+        opacity: 1,
         aspectRatio: 1,
       }}
     >
