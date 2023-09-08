@@ -1,5 +1,20 @@
 # Changelog
 
+## [1.6.0](https://github.com/TheBigSasha/tbsui-ssr/compare/v1.5.0...v1.6.0) (2023-09-08)
+
+
+### Features
+
+* cascade via abs position ([b47302e](https://github.com/TheBigSasha/tbsui-ssr/commit/b47302e32d400706a53c4f22f3f6a7e1b29a46e9))
+* cascade via flex ([ccf20d4](https://github.com/TheBigSasha/tbsui-ssr/commit/ccf20d463bea23aa592a6c2b9f32b7e8fb065b1c))
+* css only layer decomposition view via css grids ([6a18b2a](https://github.com/TheBigSasha/tbsui-ssr/commit/6a18b2aa6ac5d2cb98f64001963ecdf76029574f))
+* improve css animations ([798aa03](https://github.com/TheBigSasha/tbsui-ssr/commit/798aa03c8fbdfd653bdb0d94acd33fc9b5d76a42))
+
+
+### Bug Fixes
+
+* add export for navmenu toggle id ([4c113b9](https://github.com/TheBigSasha/tbsui-ssr/commit/4c113b9d3af5e1b3b49bf06683fcba087cd163d5))
+
 ## [1.5.0](https://github.com/TheBigSasha/tbsui-ssr/compare/v1.4.16...v1.5.0) (2023-09-07)
 
 
