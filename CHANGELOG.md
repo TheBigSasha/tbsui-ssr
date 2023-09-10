@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.7.0](https://github.com/TheBigSasha/tbsui-ssr/compare/v1.6.0...v1.7.0) (2023-09-10)
+
+
+### Features
+
+* breaking! change PopupMessage to be permanent, and the disappearing one to DisappearingPopupMessage ([4abae11](https://github.com/TheBigSasha/tbsui-ssr/commit/4abae11bcc5f7d537d21ab00376358b21e354706))
+
 ## [1.6.0](https://github.com/TheBigSasha/tbsui-ssr/compare/v1.5.0...v1.6.0) (2023-09-08)
 
 
