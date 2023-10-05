@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.7.1](https://github.com/TheBigSasha/tbsui-ssr/compare/v1.7.0...v1.7.1) (2023-10-05)
+
+
+### Bug Fixes
+
+* navmenu collapsed background colour ([81ac927](https://github.com/TheBigSasha/tbsui-ssr/commit/81ac927373d2409279c6ef3ab981f37d88bc635a))
+* navmenu internal margins ([dba9a05](https://github.com/TheBigSasha/tbsui-ssr/commit/dba9a05f4f6c59e96c6859f5f99beec2cda8a619))
+
 ## [1.7.0](https://github.com/TheBigSasha/tbsui-ssr/compare/v1.6.0...v1.7.0) (2023-09-10)
 
 
