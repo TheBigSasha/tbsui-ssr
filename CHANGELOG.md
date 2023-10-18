@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.7.2](https://github.com/TheBigSasha/tbsui-ssr/compare/v1.7.1...v1.7.2) (2023-10-18)
+
+
+### Bug Fixes
+
+* navmenu hover ([e9669ef](https://github.com/TheBigSasha/tbsui-ssr/commit/e9669efcafa7de5d521e42bd43db86c4c8b47b80))
+
 ## [1.7.1](https://github.com/TheBigSasha/tbsui-ssr/compare/v1.7.0...v1.7.1) (2023-10-05)
 
 
