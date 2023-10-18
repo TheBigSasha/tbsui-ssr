@@ -316,6 +316,9 @@
       stroke: none;
       transition: all 0.3s ease-out;
     }
+    &:hover{
+      color: var(--gray-900);
+    }
   }
 }
 
