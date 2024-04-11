@@ -371,7 +371,7 @@
 }
 
 .dropdown {
-    position: absolute !important;
+    position: absolute;
     top: 0;
     right: 0;
     display: block;
@@ -383,6 +383,5 @@
     padding: var(--navmenu-dropdown-padding);
     border-radius: var(--border-radius);
     width: max-content;
-    overflow: hidden;
     margin-top: var(--space-10);
 }
