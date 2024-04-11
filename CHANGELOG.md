@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.8.1](https://github.com/TheBigSasha/tbsui-ssr/compare/v1.8.0...v1.8.1) (2024-04-11)
+
+
+### Bug Fixes
+
+* size of padding on navmenu dropdowns ([774c2c0](https://github.com/TheBigSasha/tbsui-ssr/commit/774c2c05e583423ee110ae4bf442447e85af1e1d))
+* stop wrapping link on open submenu ([abb5fee](https://github.com/TheBigSasha/tbsui-ssr/commit/abb5fee5d38a6acf295e6b0bf281c257d9297f63))
+* zindex of dropdown ([ced2058](https://github.com/TheBigSasha/tbsui-ssr/commit/ced2058a3de7a2af2934132bb4602824975eaad7))
+
 ## [1.8.0](https://github.com/TheBigSasha/tbsui-ssr/compare/v1.7.2...v1.8.0) (2024-04-11)
 
 
