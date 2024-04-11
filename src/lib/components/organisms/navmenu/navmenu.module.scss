@@ -351,6 +351,7 @@
     position: relative;
     max-height: 1rem;
     overflow: visible;
+    z-index: 9901;
     min-width: max-content;
     display: block;
     & > .dropdown {
@@ -381,7 +382,7 @@
     backdrop-filter: var(--background-blur);
     animation: navmenu_transition_slidedown 0.3s ease-out;
     animation-fill-mode: forwards;
-    padding: var(--padding);
+    padding: var(--navmenu-dropdown-padding);
     border-radius: var(--border-radius);
     width: max-content;
     overflow: hidden;
