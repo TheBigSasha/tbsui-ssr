@@ -27,6 +27,7 @@ const DropDownCollapsibleCategory = ({ cat }: { cat: CollapsibleCategory }) => {
   return (
     <li className={[styles.dropdown_cat].join(' ')}>
       {cat.title}
+      <span className={styles.spin_chevron}></span>
       <div className={styles.dropdown}>
         <ul className={styles.dropdown_cat_list}>
           {cat.elements.map((item, index) => (
@@ -105,13 +106,14 @@ export interface ToggleNavMenuProps {
   fillScreen?: 'always' | 'mobile' | 'never'
 }
 
+const getRectY = (index: number) => index * (18 / 2) + 2
+
 export const ToggleNavMenu: FC<ToggleNavMenuProps> = ({
   links,
   headerItem,
   headerItemPosition,
   fillScreen = 'mobile',
 }) => {
-  const getRectY = (index: number) => index * (18 / 2) + 2
   return (
     <nav className={styles.nav_menu_toggleable}>
       <input className={styles.nav_check_input} type="checkbox" id={styles.tbsui_ssr_navmenu_toggle} />

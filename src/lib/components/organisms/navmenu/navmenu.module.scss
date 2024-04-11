@@ -344,7 +344,17 @@
 .gap {
   height: 100vh;
 }
-
+.spin_chevron {
+    transition: all 0.3s;
+    transform: rotate(0deg);
+     width: 0;
+    height: 0;
+    border-left: 0.3em solid transparent;
+    border-right: 0.3em solid transparent;
+    margin-top: 0.4em;
+    margin-left: -0.2em;
+    border-top: 0.3em solid var(--gray-700);
+}
 .dropdown_cat{
     @extend .link;
     white-space: nowrap;
@@ -353,14 +363,19 @@
     overflow: visible;
     z-index: 9888;
     min-width: max-content;
-    display: block;
+    display: flex;
+    cursor: pointer;
     & > .dropdown {
         display: none;
     }
     &:hover {
-        cursor: pointer;
         & > .dropdown {
             display: block;
+        }
+        & .spin_chevron{
+            display: inline-block;
+            alignment-baseline: middle;
+            transform: rotate(180deg);
         }
     }
     &:active {
