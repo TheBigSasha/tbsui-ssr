@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.8.3](https://github.com/TheBigSasha/tbsui-ssr/compare/v1.8.2...v1.8.3) (2024-04-11)
+
+
+### Bug Fixes
+
+* styling the css ([8e233f4](https://github.com/TheBigSasha/tbsui-ssr/commit/8e233f457b0d49d66efc09f4b2916599cbb2db57))
+
 ## [1.8.2](https://github.com/TheBigSasha/tbsui-ssr/compare/v1.8.1...v1.8.2) (2024-04-11)
 
 
