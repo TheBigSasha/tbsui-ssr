@@ -25,7 +25,7 @@ export interface NavMenuProps {
 
 const DropDownCollapsibleCategory = ({ cat }: { cat: CollapsibleCategory }) => {
   return (
-    <li className={[styles.link, styles.dropdown_cat].join(' ')}>
+    <li className={[styles.dropdown_cat].join(' ')}>
       {cat.title}
       <div className={styles.dropdown}>
         <ul className={styles.dropdown_cat_list}>

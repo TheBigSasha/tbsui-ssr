@@ -299,9 +299,10 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: space-around;
   width: 100%;
   margin: 0;
+  height: min-content;
   padding: 0;
   list-style: none;
   gap: var(--space-md);
@@ -346,7 +347,12 @@
 
 .dropdown_cat{
     @extend .link;
+    white-space: nowrap;
     position: relative;
+    max-height: 1rem;
+    overflow: visible;
+    min-width: max-content;
+    display: block;
     & > .dropdown {
         display: none;
     }
