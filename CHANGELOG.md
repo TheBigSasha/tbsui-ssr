@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.8.0](https://github.com/TheBigSasha/tbsui-ssr/compare/v1.7.2...v1.8.0) (2024-04-11)
+
+
+### Features
+
+* navmenu categories upgrade ([b61e30b](https://github.com/TheBigSasha/tbsui-ssr/commit/b61e30bd4f7703251336a57e9403b0023eadebe0))
+
 ## [1.7.2](https://github.com/TheBigSasha/tbsui-ssr/compare/v1.7.1...v1.7.2) (2023-10-18)
 
 
