@@ -57,3 +57,16 @@ NoCategories.args = {
   ),
   headerItemPosition: 'left',
 }
+
+export const CollapsibleCategories = Template.bind({})
+CollapsibleCategories.args = {
+  links: [
+    { link: <a href="#">Link 1</a> },
+    { link: <a href="#">Link 2</a> },
+    { link: <a href="#">Link 3</a> },
+    {
+      title: <a href="#">CCat 1</a>,
+      elements: [{ link: <a href="#">Link 4</a> }, { link: <a href="#">Link 5</a> }, { link: <a href="#">Link 6</a> }],
+    },
+  ],
+}

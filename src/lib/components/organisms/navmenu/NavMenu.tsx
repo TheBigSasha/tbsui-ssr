@@ -1,6 +1,6 @@
 import { FC, ReactNode } from 'react'
-import styles from './navmenu.module.scss'
 import responsive from '../../../styles/responsive.module.scss'
+import styles from './navmenu.module.scss'
 export interface MenuItem {
   link: ReactNode
 }
@@ -9,13 +9,35 @@ export interface CategoryDelimiter {
   category: string
 }
 
-export type NavMenuEntry = MenuItem | CategoryDelimiter
+export interface CollapsibleCategory {
+  title: ReactNode
+  elements: MenuItem[]
+}
+
+export type NavMenuEntry = MenuItem | CategoryDelimiter | CollapsibleCategory
 
 export interface NavMenuProps {
   links: NavMenuEntry[]
   headerLeft?: ReactNode
   headerRight?: ReactNode
   fillScreen?: 'always' | 'mobile' | 'never'
+}
+
+const DropDownCollapsibleCategory = ({ cat }: { cat: CollapsibleCategory }) => {
+  return (
+    <li className={[styles.link, styles.dropdown_cat].join(' ')}>
+      {cat.title}
+      <div className={styles.dropdown}>
+        <ul className={styles.dropdown_cat_list}>
+          {cat.elements.map((item, index) => (
+            <li key={index} className={styles.link}>
+              {item.link}
+            </li>
+          ))}
+        </ul>
+      </div>
+    </li>
+  )
 }
 
 const Gap: FC<{ type: 'always' | 'mobile' | 'never' }> = ({ type }) => {
@@ -48,6 +70,20 @@ export const NavMenu: FC<NavMenuProps> = ({ links, headerLeft, headerRight, fill
               <li key={index} className={styles.category}>
                 {link.category}
               </li>
+            )
+          }
+          if ('elements' in link) {
+            return (
+              <>
+                <li key={index} className={styles.category_nested}>
+                  {link.title}
+                </li>
+                {link.elements.map((innerLink) => (
+                  <li key={index} className={styles.link_nested}>
+                    {innerLink.link}
+                  </li>
+                ))}
+              </>
             )
           }
           return (
@@ -111,6 +147,20 @@ export const ToggleNavMenu: FC<ToggleNavMenuProps> = ({
                 </li>
               )
             }
+            if ('elements' in link) {
+              return (
+                <>
+                  <li key={index} className={styles.category_nested}>
+                    {link.title}
+                  </li>
+                  {link.elements.map((innerLink) => (
+                    <li key={index} className={styles.link_nested}>
+                      {innerLink.link}
+                    </li>
+                  ))}
+                </>
+              )
+            }
             return (
               <li key={index} className={styles.link}>
                 {link.link}
@@ -161,12 +211,16 @@ export const ResponsiveNavMenu: FC<ToggleNavMenuProps> = ({
           <span className={responsive.lg_or_larger}>
             <span className={styles.nav_links_hor}>
               {links.map((link, index) => {
-                if (!('category' in link))
+                if (!('category' in link) && !('elements' in link)) {
                   return (
                     <li key={index} className={styles.link}>
-                      {link.link}
+                      {(link as MenuItem).link}
                     </li>
                   )
+                }
+                if ('elements' in link) {
+                  return <DropDownCollapsibleCategory key={index} cat={link as unknown as CollapsibleCategory} />
+                }
               })}
             </span>
           </span>
@@ -178,6 +232,20 @@ export const ResponsiveNavMenu: FC<ToggleNavMenuProps> = ({
                 <li key={index} className={styles.category}>
                   {link.category}
                 </li>
+              )
+            }
+            if ('elements' in link) {
+              return (
+                <>
+                  <li key={index} className={styles.category_nested}>
+                    {link.title}
+                  </li>
+                  {link.elements.map((innerLink) => (
+                    <li key={index} className={styles.link_nested}>
+                      {innerLink.link}
+                    </li>
+                  ))}
+                </>
               )
             }
             return (
