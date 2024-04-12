@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.8.5](https://github.com/TheBigSasha/tbsui-ssr/compare/v1.8.4...v1.8.5) (2024-04-12)
+
+
+### Bug Fixes
+
+* navmenu pointer events ([13bd05f](https://github.com/TheBigSasha/tbsui-ssr/commit/13bd05f224c1babbd5aa7a30c39551832ec3bc98))
+
 ## [1.8.4](https://github.com/TheBigSasha/tbsui-ssr/compare/v1.8.3...v1.8.4) (2024-04-11)
 
 
