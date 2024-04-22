@@ -20,6 +20,7 @@ export interface NavMenuProps {
   links: NavMenuEntry[]
   headerLeft?: ReactNode
   headerRight?: ReactNode
+  positionItems?: 'center' | 'left' | 'right'
   fillScreen?: 'always' | 'mobile' | 'never'
 }
 
@@ -58,13 +59,19 @@ const Gap: FC<{ type: 'always' | 'mobile' | 'never' }> = ({ type }) => {
   return null
 }
 
-export const NavMenu: FC<NavMenuProps> = ({ links, headerLeft, headerRight, fillScreen = 'mobile' }) => {
+export const NavMenu: FC<NavMenuProps> = ({
+  links,
+  headerLeft,
+  headerRight,
+  fillScreen = 'mobile',
+  positionItems = 'left',
+}) => {
   return (
     <nav className={styles.nav_menu}>
       <div className={styles.nav_menu_header}>
         {headerLeft} {headerRight}
       </div>
-      <ul className={styles.nav_menu_list}>
+      <ul className={[styles.nav_menu_list, styles[`nav_menu_list_${positionItems}`]].join(' ')}>
         {links.map((link, index) => {
           if ('category' in link) {
             return (
@@ -113,6 +120,7 @@ export const ToggleNavMenu: FC<ToggleNavMenuProps> = ({
   headerItem,
   headerItemPosition,
   fillScreen = 'mobile',
+  positionItems = 'left',
 }) => {
   return (
     <nav className={styles.nav_menu_toggleable}>
@@ -140,7 +148,7 @@ export const ToggleNavMenu: FC<ToggleNavMenuProps> = ({
             </label>
           </span>
         </div>
-        <ul className={styles.nav_menu_list}>
+        <ul className={[styles.nav_menu_list, styles[`nav_menu_list_${positionItems}`]].join(' ')}>
           {links.map((link, index) => {
             if ('category' in link) {
               return (
@@ -181,6 +189,7 @@ export const ResponsiveNavMenu: FC<ToggleNavMenuProps> = ({
   headerItem,
   headerItemPosition,
   fillScreen = 'mobile',
+  positionItems = 'left',
 }) => {
   const getRectY = (index: number) => index * (18 / 2) + 2
   return (
@@ -227,7 +236,7 @@ export const ResponsiveNavMenu: FC<ToggleNavMenuProps> = ({
             </span>
           </span>
         </div>
-        <ul className={styles.nav_menu_list}>
+        <ul className={[styles.nav_menu_list, styles[`nav_menu_list_${positionItems}`]].join(' ')}>
           {links.map((link, index) => {
             if ('category' in link) {
               return (
