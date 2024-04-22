@@ -111,6 +111,7 @@ export interface ToggleNavMenuProps {
   headerItem?: ReactNode
   headerItemPosition?: 'left' | 'right'
   fillScreen?: 'always' | 'mobile' | 'never'
+  positionItems?: 'center' | 'left' | 'right'
 }
 
 const getRectY = (index: number) => index * (18 / 2) + 2
