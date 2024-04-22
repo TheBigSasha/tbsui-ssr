@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.9.0](https://github.com/TheBigSasha/tbsui-ssr/compare/v1.8.5...v1.9.0) (2024-04-22)
+
+
+### Features
+
+* different alignements for navmenu contents (left center right) ([62d6e1a](https://github.com/TheBigSasha/tbsui-ssr/commit/62d6e1a5f34dcd3a57503688232d680f0f4ad877))
+* update all libs and little fixes ([41fba21](https://github.com/TheBigSasha/tbsui-ssr/commit/41fba21ba823a3d3166c1ebcf92abea2b457efb0))
+
 ## [1.8.5](https://github.com/TheBigSasha/tbsui-ssr/compare/v1.8.4...v1.8.5) (2024-04-12)
 
 
