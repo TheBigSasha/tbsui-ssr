@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.9.1](https://github.com/TheBigSasha/tbsui-ssr/compare/v1.9.0...v1.9.1) (2024-04-22)
+
+
+### Bug Fixes
+
+* navmenu styles ([d3ff03f](https://github.com/TheBigSasha/tbsui-ssr/commit/d3ff03f0e540f76083bd68dc4d8e5d17da433369))
+
 ## [1.9.0](https://github.com/TheBigSasha/tbsui-ssr/compare/v1.8.5...v1.9.0) (2024-04-22)
 
 
