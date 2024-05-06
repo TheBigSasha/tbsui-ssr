@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.10.1](https://github.com/TheBigSasha/tbsui-ssr/compare/v1.10.0...v1.10.1) (2024-05-06)
+
+
+### Bug Fixes
+
+* some navbar styling issues and CSS organization ([0c73252](https://github.com/TheBigSasha/tbsui-ssr/commit/0c732529f2629b720dd2a7f96ef5f9620f3db53a))
+* update the class for tbsui_ssr_header_item_expanded to not 100% height ([3e83dfa](https://github.com/TheBigSasha/tbsui-ssr/commit/3e83dfaa85397dc832487f7d7bc7623c0ed5a857))
+
 ## [1.10.0](https://github.com/TheBigSasha/tbsui-ssr/compare/v1.9.1...v1.10.0) (2024-05-06)
 
 
