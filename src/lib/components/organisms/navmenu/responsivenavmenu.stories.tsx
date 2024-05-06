@@ -59,6 +59,7 @@ NoCategories.args = {
       <p style={{ margin: 'auto', fontSize: '100%' }}>
         <p className={NAVMENU_HEADER_ITEM_CLASS_EXPANDED}>Expanded</p>
         Header
+        <div />
         <span className={NAVMENU_HEADER_ITEM_CLASS_COLLAPSED}> Collapsed</span>
       </p>
     </>

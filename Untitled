@@ -60,10 +60,8 @@
   max-height: 0;
   overflow: hidden;
   margin: 0;
-  padding-top: calc(var(--navmenu-height-collapsed) / 2 + var(--padding));
-  padding-bottom: calc(var(--navmenu-height-collapsed) / 2 + var(--padding));
-  padding-left: var(--padding);
-  padding-right: var(--padding);
+  /* padding: calc(var(--navmenu-height-collapsed) / 2)) */
+  padding: 1rem;
   @media screen and (min-width: 768px) {
     overflow: visible;
   }
@@ -148,7 +146,7 @@
 
   #tbsui_ssr_navmenu_toggle:not(:checked) {
     & ~ .nav_menu {
-      height: min-content;
+      /* height: auto; */
       transition-delay: 0.6s;
       @include navmenu_transition_base;
     }
@@ -189,9 +187,9 @@
   padding: 0;
   width: 100%;
   margin: 0;
-  margin-top: calc(-1 * var(--navmenu-height-collapsed) / 2);
+  margin-top: -0.5rem;
   margin-bottom: 0.5rem;
-  max-height: calc(var(--navmenu-height-collapsed));
+  max-height: 100%;
 }
 
 .nav_menu_item {
@@ -253,7 +251,6 @@
   transition: all 0.3s ease-out;
   max-height: 100vh;
   pointer-events: none;
-  margin-top: var(--navmenu-height-collapsed);
   & :first-child {
     margin-top: var(--space-sm);
   }
@@ -500,7 +497,6 @@
       transition: all 0.3s ease-out;
       /* height: var(--navmenu-height-expanded); */
       margin: 0;
-      max-height: var(--navmenu-height-expanded);
       /* margin: 0; */
       /* align-items: center; */
       /* background-color: green; */
