@@ -23,7 +23,7 @@ export default meta
 
 // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
 const Template: StoryFn<typeof ResponsiveNavMenu> = (args: NeoNavMenuProps) => (
-  <div style={{ width: '100vw' }}>
+  <div style={{ width: '100vw', position: 'fixed', top: 0, left: 0 }}>
     <ResponsiveNavMenu {...args}></ResponsiveNavMenu>
   </div>
 )
