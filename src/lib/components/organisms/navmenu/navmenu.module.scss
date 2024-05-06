@@ -507,7 +507,7 @@
     & ~ * .tbsui_ssr_header_item_expanded {
       opacity: 1;
       font-size: var(--navmeu_header_expanded_font_size);
-      height: 100%;
+      height: auto;
     }
 
     & ~ * .tbsui_ssr_header_item_collapsed {
