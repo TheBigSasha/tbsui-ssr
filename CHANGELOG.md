@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.10.0](https://github.com/TheBigSasha/tbsui-ssr/compare/v1.9.1...v1.10.0) (2024-05-06)
+
+
+### Features
+
+* BREAKING: new navmenu features and cleanup ([21d37f4](https://github.com/TheBigSasha/tbsui-ssr/commit/21d37f44865b14afbf08e0f13f6e068973b12071))
+
 ## [1.9.1](https://github.com/TheBigSasha/tbsui-ssr/compare/v1.9.0...v1.9.1) (2024-04-22)
 
 
