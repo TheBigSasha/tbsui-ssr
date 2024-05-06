@@ -175,16 +175,6 @@
 
 .nav_menu_toggleable_responsive {
   @extend .nav_menu_toggleable;
-  & .nav_menu {
-    @media (min-width: 1024px) {
-      // .lg_or_larger
-      justify-content: center !important;
-      & .nav_menu_header {
-        margin-top: 0;
-        margin-bottom: 0;
-      }
-    }
-  }
 }
 .nav_menu_header {
   transition: all 0.3s ease-out;
@@ -344,11 +334,10 @@
   & .link {
     @include links_in;
     padding: 0 !important;
-    font-size: var(--font-size-sm);
+    font-size: 10px;
     font-weight: var(--font-weight-bold);
     font-family: var(--font-sans);
     color: var(--gray-700);
-    font-variant-caps: all-petite-caps;
     margin: 0;
     text-decoration: none;
     & a {
