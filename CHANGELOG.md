@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.10.2](https://github.com/TheBigSasha/tbsui-ssr/compare/v1.10.1...v1.10.2) (2024-05-06)
+
+
+### Bug Fixes
+
+* safari css and storybook update ([8b0e987](https://github.com/TheBigSasha/tbsui-ssr/commit/8b0e987bfd7233cbfebd2a78718d9cbc68d0b537))
+
 ## [1.10.1](https://github.com/TheBigSasha/tbsui-ssr/compare/v1.10.0...v1.10.1) (2024-05-06)
 
 
