@@ -1,5 +1,10 @@
 import React from 'react'
-import { ResponsiveNavMenu, ToggleNavMenuProps } from '.'
+import {
+  NeoNavMenuProps,
+  ResponsiveNavMenu,
+  NAVMENU_HEADER_ITEM_CLASS_EXPANDED,
+  NAVMENU_HEADER_ITEM_CLASS_COLLAPSED,
+} from '.'
 import { Meta } from '@storybook/react'
 import { StoryFn } from '@storybook/react'
 
@@ -8,17 +13,17 @@ const meta: Meta<typeof ResponsiveNavMenu> = {
   title: 'Organisms/ResponsiveNavMenu',
   component: ResponsiveNavMenu,
   parameters: {
-    isFullscreen: true,
     layout: 'fullscreen',
   },
+  tags: ['autodocs'],
   // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
 }
 
 export default meta
 
 // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
-const Template: StoryFn<typeof ResponsiveNavMenu> = (args: ToggleNavMenuProps) => (
-  <div style={{ maxWidth: 1200, width: '90%' }}>
+const Template: StoryFn<typeof ResponsiveNavMenu> = (args: NeoNavMenuProps) => (
+  <div style={{ width: '100vw' }}>
     <ResponsiveNavMenu {...args}></ResponsiveNavMenu>
   </div>
 )
@@ -51,8 +56,13 @@ NoCategories.args = {
   ],
   headerItem: (
     <>
-      <a href="#">Header Item</a>
-      <a href="#">X</a>
+      <p style={{ margin: 'auto', fontSize: '100%' }}>
+        <p style={{ margin: 'auto' }} className={NAVMENU_HEADER_ITEM_CLASS_EXPANDED}>
+          Expanded
+        </p>
+        Header
+        <span className={NAVMENU_HEADER_ITEM_CLASS_COLLAPSED}> Small</span>
+      </p>
     </>
   ),
   headerItemPosition: 'left',

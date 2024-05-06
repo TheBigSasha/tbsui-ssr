@@ -22,7 +22,7 @@
 .lg_or_smaller {
   display: block;
   @media screen and (min-width: 1024px) {
-    display: none;
+    display: none !important;
   }
 }
 
