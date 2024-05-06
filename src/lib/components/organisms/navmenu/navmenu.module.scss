@@ -436,7 +436,7 @@
 
 @mixin cardify {
   @media screen and (min-width: 400px) {
-    width: min(80vw, 960px);
+    width: var(--navmenu-card-width);
     margin: auto;
     margin-top: var(--navmenu-space-from-top);
     border-radius: var(--border-radius);
@@ -481,7 +481,16 @@
       overflow: visible;
       background-color: none;
       max-height: var(--navmenu-height-expanded);
+      width: var(--navmenu-expanded-width);
+      padding-left: var(--navmenu-expanded-padding);
+      padding-right: var(--navmenu-expanded-padding);
       /* margin-top: 0; */
+    }
+
+    & ~ .nav_menu_cardify_collapsible {
+      width: var(--navmenu-expanded-width);
+      padding-left: var(--navmenu-expanded-padding);
+      padding-right: var(--navmenu-expanded-padding);
     }
     & ~ * .nav_menu_header {
       transition: all 0.3s ease-out;
