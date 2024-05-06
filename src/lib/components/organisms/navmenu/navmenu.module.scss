@@ -190,7 +190,7 @@
   transition: all 0.3s ease-out;
   display: flex;
   justify-content: space-between;
-  align-items: flex-start; // Used to be
+  align-items: center; // Used to be flex start
   align-self: center;
   justify-self: center;
   padding: 0;
@@ -487,20 +487,21 @@
     & ~ .nav_menu {
       transition: all 0.3s ease-out;
       background: none;
+      overflow: visible;
       background-color: none;
       max-height: var(--navmenu-height-expanded);
       /* margin-top: 0; */
     }
     & ~ * .nav_menu_header {
       transition: all 0.3s ease-out;
-      height: var(--navmenu-height-expanded);
+      /* height: var(--navmenu-height-expanded); */
       margin: 0;
       /* margin: 0; */
       /* align-items: center; */
       /* background-color: green; */
       & > * {
         transition: all 0.3s ease-out;
-        height: var(--navmenu-height-expanded);
+        /* height: var(--navmenu-height-expanded); */
       }
     }
 
