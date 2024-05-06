@@ -1,3 +1,5 @@
+@import '../../../styles/responsive.module.scss';
+
 @mixin transition {
   @keyframes navmenu_transition_i {
     0% {
@@ -239,9 +241,11 @@
 }
 
 .nav_check_container {
-  display: grid;
-  place-items: center;
-  height: 100%;
+  @include size_or_smaller($lg) {
+    display: grid;
+    place-items: center;
+    height: 100%;
+  }
 }
 
 .nav_menu_list {
@@ -311,6 +315,12 @@
     &:nth-child(#{$i}) {
       animation-delay: $i * 0.02s;
     }
+  }
+}
+
+.nav_links_wrapper {
+  @include size_or_larger($lg) {
+    display: block;
   }
 }
 

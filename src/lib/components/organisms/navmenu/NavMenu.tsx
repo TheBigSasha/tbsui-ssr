@@ -106,7 +106,7 @@ export const ResponsiveNavMenu: FC<NeoNavMenuProps> = ({
           }}
         >
           <span className={styles.tbsui_ssr_header_item}>{headerItem}</span>
-          <span className={[styles.nav_check_container, responsive.lg_or_smaller].join(' ')}>
+          <span className={[styles.nav_check_container].join(' ')}>
             <label className={styles.nav_check_label} htmlFor={styles.tbsui_ssr_navmenu_toggle}>
               <svg className={styles.nav_check_icon} viewBox="0 0 24 24">
                 <rect className={styles.nav_check_rect} x="0" y="0" width="24" height="24" rx={12}></rect>
@@ -120,7 +120,7 @@ export const ResponsiveNavMenu: FC<NeoNavMenuProps> = ({
               </svg>
             </label>
           </span>
-          <span className={responsive.lg_or_larger}>
+          <span className={styles.nav_links_wrapper}>
             <span className={styles.nav_links_hor}>
               {links.map((link, index) => {
                 if (!('category' in link) && !('elements' in link)) {
