@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.10.5](https://github.com/TheBigSasha/tbsui-ssr/compare/v1.10.4...v1.10.5) (2024-05-06)
+
+
+### Bug Fixes
+
+* even more navmenu control ([051323d](https://github.com/TheBigSasha/tbsui-ssr/commit/051323d1a1c35a1509ddef77b30dcb96c2c5cd7b))
+
 ## [1.10.4](https://github.com/TheBigSasha/tbsui-ssr/compare/v1.10.3...v1.10.4) (2024-05-06)
 
 
