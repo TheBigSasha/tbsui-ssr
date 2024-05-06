@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.10.3](https://github.com/TheBigSasha/tbsui-ssr/compare/v1.10.2...v1.10.3) (2024-05-06)
+
+
+### Bug Fixes
+
+* more css updates ([13715ab](https://github.com/TheBigSasha/tbsui-ssr/commit/13715ab4af1c678f14f38e432b2b8c16cb951cb6))
+
 ## [1.10.2](https://github.com/TheBigSasha/tbsui-ssr/compare/v1.10.1...v1.10.2) (2024-05-06)
 
 
