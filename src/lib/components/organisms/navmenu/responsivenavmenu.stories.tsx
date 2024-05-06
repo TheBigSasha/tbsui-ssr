@@ -57,9 +57,7 @@ NoCategories.args = {
   headerItem: (
     <>
       <p style={{ margin: 'auto', fontSize: '100%' }}>
-        <p style={{ margin: 'auto' }} className={NAVMENU_HEADER_ITEM_CLASS_EXPANDED}>
-          Expanded
-        </p>
+        <p className={NAVMENU_HEADER_ITEM_CLASS_EXPANDED}>Expanded</p>
         Header
         <span className={NAVMENU_HEADER_ITEM_CLASS_COLLAPSED}> Small</span>
       </p>

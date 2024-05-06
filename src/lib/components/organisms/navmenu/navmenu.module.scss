@@ -461,10 +461,11 @@
   transition: all 0.3s ease-out;
   opacity: 0;
   height: 0;
+  margin-block-start: 0;
+  margin-block-end: 0;
   padding: 0;
   font-size: 0;
-  margin-top: 0;
-  margin-bottom: 0;
+  margin: 0;
   overflow: hidden;
   font-size: 0;
 }
@@ -508,7 +509,7 @@
     & ~ * .tbsui_ssr_header_item_expanded {
       opacity: 1;
       font-size: var(--navmeu_header_expanded_font_size);
-      height: auto;
+      height: unset;
     }
 
     & ~ * .tbsui_ssr_header_item_collapsed {
@@ -520,7 +521,7 @@
 }
 
 .tbsui_ssr_header_item {
-  height: 100%;
+  height: auto;
   display: flex;
   align-items: center;
   flex-direction: column;
