@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.10.4](https://github.com/TheBigSasha/tbsui-ssr/compare/v1.10.3...v1.10.4) (2024-05-06)
+
+
+### Bug Fixes
+
+* font size in navbar set again ([6ddc5d9](https://github.com/TheBigSasha/tbsui-ssr/commit/6ddc5d99371410df442192477ef6b205d12090b5))
+* more navmenu customization thru css variables ([2d861e9](https://github.com/TheBigSasha/tbsui-ssr/commit/2d861e9b4aefc414c3414be606c4bdc89646de99))
+
 ## [1.10.3](https://github.com/TheBigSasha/tbsui-ssr/compare/v1.10.2...v1.10.3) (2024-05-06)
 
 
