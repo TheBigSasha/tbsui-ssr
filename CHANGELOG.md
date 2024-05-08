@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.11.2](https://github.com/TheBigSasha/tbsui-ssr/compare/v1.11.1...v1.11.2) (2024-05-08)
+
+
+### Bug Fixes
+
+* example for webkit compatibiltiy for dynamic header size ([c7d8fcb](https://github.com/TheBigSasha/tbsui-ssr/commit/c7d8fcb171068b311245940379d0463f8e9925a4))
+
 ## [1.11.1](https://github.com/TheBigSasha/tbsui-ssr/compare/v1.11.0...v1.11.1) (2024-05-08)
 
 
