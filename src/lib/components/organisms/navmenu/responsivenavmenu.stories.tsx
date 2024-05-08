@@ -60,9 +60,11 @@ NoCategories.args = {
   scrollCollapse: 'card',
   headerItem: (
     <>
-      <p style={{ margin: 'auto', color: 'red' }}>
-        <p className={NAVMENU_HEADER_SHRINK_ITEM_CLASS}>Dynamic</p>
-        Header
+      <p style={{ margin: 'auto', display: 'flex', flexDirection: 'column', color: 'red' }}>
+        <div className={NAVMENU_HEADER_SHRINK_ITEM_CLASS} style={{ margin: 0, display: 'inline-block' }}>
+          <p style={{ margin: 0 }}>Dynamic</p>
+        </div>
+        <p style={{ margin: 0 }}>Header</p>
         <div />
       </p>
     </>
