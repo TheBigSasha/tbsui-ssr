@@ -492,9 +492,11 @@
     /* margin: auto; */
     & ~ .nav_menu {
       transition: all 0.3s ease-out;
+      background-color: transparent;
       background: none;
       overflow: visible;
-      background-color: none;
+      backdrop-filter: none;
+      -webkit-backdrop-filter: none;
       max-height: var(--navmenu-height-expanded);
       width: var(--navmenu-expanded-width);
       padding-left: var(--navmenu-expanded-padding);
