@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.11.1](https://github.com/TheBigSasha/tbsui-ssr/compare/v1.11.0...v1.11.1) (2024-05-08)
+
+
+### Bug Fixes
+
+* remove extraneous navmenu blur ([5a4c250](https://github.com/TheBigSasha/tbsui-ssr/commit/5a4c2509a220ea291721771b8d75630c1f44fec4))
+
 ## [1.11.0](https://github.com/TheBigSasha/tbsui-ssr/compare/v1.10.5...v1.11.0) (2024-05-08)
 
 
