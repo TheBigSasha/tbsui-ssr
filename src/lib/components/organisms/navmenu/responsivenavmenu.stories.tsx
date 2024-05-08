@@ -4,6 +4,7 @@ import {
   ResponsiveNavMenu,
   NAVMENU_HEADER_ITEM_CLASS_EXPANDED,
   NAVMENU_HEADER_ITEM_CLASS_COLLAPSED,
+  NAVMENU_HEADER_SHRINK_ITEM_CLASS,
 } from '.'
 import { Meta } from '@storybook/react'
 import { StoryFn } from '@storybook/react'
@@ -47,6 +48,31 @@ Primary.args = {
 export const NoCategories = Template.bind({})
 NoCategories.args = {
   links: [
+    { link: <a href="#">Dynamic item goes</a> },
+    { link: <a href="#">From size xl</a> },
+    { link: <a href="#">To size sm</a> },
+    { link: <a href="#">When the header </a> },
+    { link: <a href="#">Switches between</a> },
+    { link: <a href="#">Small & Large modes</a> },
+  ],
+  scrollCollapsed: true,
+  fillScreen: 'never',
+  scrollCollapse: 'card',
+  headerItem: (
+    <>
+      <p style={{ margin: 'auto', color: 'red' }}>
+        <p className={NAVMENU_HEADER_SHRINK_ITEM_CLASS}>Dynamic</p>
+        Header
+        <div />
+      </p>
+    </>
+  ),
+  headerItemPosition: 'left',
+}
+
+export const ScrollCollapsed = Template.bind({})
+ScrollCollapsed.args = {
+  links: [
     { link: <a href="#">Link 1</a> },
     { link: <a href="#">Link 2</a> },
     { link: <a href="#">Link 3</a> },
@@ -54,9 +80,11 @@ NoCategories.args = {
     { link: <a href="#">Link 5</a> },
     { link: <a href="#">Link 6</a> },
   ],
+  scrollCollapsed: false,
+  scrollCollapse: 'card',
   headerItem: (
     <>
-      <p style={{ margin: 'auto', fontSize: '100%' }}>
+      <p style={{ margin: 'auto', fontSize: '100%', color: 'red' }}>
         <p className={NAVMENU_HEADER_ITEM_CLASS_EXPANDED}>Expanded</p>
         Header
         <div />

@@ -91,8 +91,8 @@ export const ResponsiveNavMenu: FC<NeoNavMenuProps> = ({
     scrollCollapse === 'never'
       ? styles.scroll_collapse_never
       : scrollCollapse === 'card'
-        ? styles.nav_menu_cardify_collapsible
-        : styles.nav_menu_collapsible
+      ? styles.nav_menu_cardify_collapsible
+      : styles.nav_menu_collapsible
 
   const classNameCollapsed = scrollCollapsed ? '' : styles.expanded
   return (
@@ -177,3 +177,4 @@ export const NAV_MENU_TOGGLE_ID = styles.tbsui_ssr_navmenu_toggle
 export const NAVMENU_HEADER_ITEM_CLASS_COLLAPSED = styles.tbsui_ssr_header_item_collapsed
 export const NAVMENU_HEADER_ITEM_CLASS_EXPANDED = styles.tbsui_ssr_header_item_expanded
 export const NAVMENU_EXPANDED_CLASS = styles.expanded //Enables toggling expanded state without React
+export const NAVMENU_HEADER_SHRINK_ITEM_CLASS = styles.tbsui_ssr_header_shrink_item
