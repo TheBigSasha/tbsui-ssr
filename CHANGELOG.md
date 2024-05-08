@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.11.0](https://github.com/TheBigSasha/tbsui-ssr/compare/v1.10.5...v1.11.0) (2024-05-08)
+
+
+### Features
+
+* dynamic sized header item in navbar ([3e513cc](https://github.com/TheBigSasha/tbsui-ssr/commit/3e513cc196cf94dca95d3f9423fd67eafb34ac29))
+
 ## [1.10.5](https://github.com/TheBigSasha/tbsui-ssr/compare/v1.10.4...v1.10.5) (2024-05-06)
 
 
